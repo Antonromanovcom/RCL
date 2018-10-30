@@ -2,21 +2,21 @@ package ru.reso.medchat.model;
 
 import ru.reso.resocalc.Entity.ComparedParam;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 
+/**
+ * Класс, который мы выплевываем в качестве value в хэшмепе наружу, в модель, на jsp
+ */
 public class ComparableValues {
 
-    private String key;
-    private String value1;
-    private String value2;
-    private ArrayList<CoeffsAndValues> coeffCalcList = new ArrayList<>();
+    private String key; //ключ. Обычно имя поля
+    private String value1; // значение по calc id 1
+    private String value2; // значение по calc id 2
+    private ArrayList<CoeffsAndValues> coeffCalcList = new ArrayList<>(); // ArrayList исключительно коэфициентов.
 
     public ComparableValues(String newkey, String val1, String val2) {
-
         this.key = newkey;
         this.value1 = val1;
         this.value2 = val2;
-
     }
 
     public ComparableValues(ComparedParam comparedParam) {

@@ -1,6 +1,5 @@
 /* Button Style */
 
-
 A {
     color: black; /* Цвет ссылок */
 }
@@ -11,10 +10,10 @@ A:active {
     color: red; /* Цвет активных ссылок */
 }
 
+/*Стиль зеленой кнопки для Расчета*/
 input.submit {
 
     height: 47px;
-    /*padding: 10px 15px 11px !important; */
     font-size: 18px !important;
     background-color: #57d6c7;
     font-weight: bold;
@@ -58,7 +57,7 @@ input.submit {
 }
 
 
-
+/*Фиолетовая кнопка в самом начале*/
 a.buttons {
     width: 179px;
     height: 32px;
@@ -115,12 +114,10 @@ a.buttons:not(:hover) {
 
 .modal-dialog,
 .modal-content {
-    /* 80% of window height */
     height: 60%;
 }
 
 .modal-body {
-
     max-height: calc(100vh - 210px);
     overflow-y: auto;
 }
@@ -129,6 +126,7 @@ textarea#paste {
     height: 150px;
 }
 
+/*------- Стили для Инпут-боксов -------------*/
 input#type1 {
     width: 20px;
     border: 0px!important;
@@ -145,6 +143,8 @@ input#type3 {
     border: 0px!important;
     box-shadow: none;
 }
+
+/* --------------------------------------------- */
 
 .container {
     text-align: center;
@@ -209,7 +209,6 @@ div.right_block {
 #line_block {
     width:180px;
     height:50px;
-   /* background:#f1f1f1;*/
     float:left;
     margin: 0 15px 15px 0;
     text-align:center;
@@ -235,48 +234,10 @@ div.right_block {
 
 
 .wrapper3 {
-    /* display: block; */
-    /* float: left; */
-    /* position: relative; */
-    /* right: 50%; */
     position: absolute;
     left: 50%;
     margin-left: -200px;
 }
 
-
-/*
-th span {
-    transform-origin: 0 50%;
-    transform: rotate(-90deg);
-    white-space: nowrap;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-}
-*/
-/*
-.driverparams th span{
-    color: blue;
- /*   transform-origin: 0 50%; */
-/*    transform: rotate(-90deg);
-    white-space: nowrap;
-    display: block;
-    width: 50px;*/
-    /* position: absolute;
-     bottom: 0;
-     left: 50%;*/
-/*
-}
-
-.driverparams{
-    height: 110px;
-}
-
-
-
-
-*/
 
 

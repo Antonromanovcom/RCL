@@ -1,5 +1,8 @@
 package ru.reso.medchat.model;
 
+/**
+ * Класс необходимый для хранения и обработки коэфициентов в ComparableValues
+ */
 public class CoeffsAndValues {
 
     /**ИД расчета     */

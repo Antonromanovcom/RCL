@@ -17,141 +17,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/controller/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="98" column="99" lean-forward="false" selection-start-line="98" selection-start-column="99" selection-end-line="98" selection-end-column="99" />
-              <folding>
-                <element signature="method#index#0;class#MainController#0" expanded="false" />
-                <element signature="method#hello#0;class#MainController#0" expanded="false" />
-                <element signature="method#aGet#0;class#MainController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fullreport.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fullreport.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/start.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="66" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mainjs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/mainjs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="90" column="40" lean-forward="false" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+            <state relative-caret-position="680">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
-                <element signature="n#!!block;n#linkFunction#0" expanded="false" />
-                <element signature="e#141#680#0" expanded="false" />
-                <element signature="e#199#672#0" expanded="false" />
-                <element signature="e#398#662#0" expanded="false" />
-                <element signature="e#533#644#0" expanded="false" />
-                <element signature="n#!!block;n#alternate2#0" expanded="false" />
-                <element signature="e#831#1493#0" expanded="false" />
-                <element signature="e#977#1487#0" expanded="false" />
-                <element signature="e#1260#1336#0" expanded="false" />
-                <element signature="e#1381#1457#0" expanded="false" />
+                <element signature="n#!!block;n#alternate4#0" expanded="false" />
                 <element signature="n#!!block;n#getHtml#0" expanded="false" />
                 <element signature="n#!!block;n#copyToClipboard#0" expanded="false" />
-                <element signature="e#4041#4221#0" expanded="false" />
-                <element signature="e#4234#4286#0" expanded="false" />
-                <element signature="e#4333#5279#0" expanded="false" />
+                <element signature="e#3022#3202#0" expanded="false" />
+                <element signature="e#3215#3267#0" expanded="false" />
+                <element signature="e#3314#4260#0" expanded="false" />
                 <element signature="n#!!block;n#parseJSONCells#0" expanded="false" />
-                <element signature="e#5407#7793#0" expanded="false" />
-                <element signature="e#5766#7787#0" expanded="false" />
+                <element signature="e#4784#6805#0" expanded="false" />
                 <element signature="n#!!block;n#getTableCellValue#0" expanded="false" />
                 <element signature="n#!!block;n#testJSON#0" expanded="false" />
-                <element signature="e#8028#8057#0" expanded="false" />
-                <element signature="e#8062#8123#0" expanded="false" />
-                <element signature="e#8157#8186#0" expanded="false" />
-                <element signature="e#8196#8250#0" expanded="false" />
-                <element signature="e#8269#8298#0" expanded="false" />
                 <element signature="n#!!block;n#setRowPrice#0" expanded="false" />
                 <element signature="n#!!block;n#setTH#0" expanded="false" />
                 <element signature="n#!!block;n#parsePartnersJSONCells#0" expanded="false" />
-                <element signature="e#9337#11376#0" expanded="false" />
-                <element signature="n#!!block;n#getOnlyDifferences#0" expanded="false" />
-                <element signature="n#!!block;n#deleteRow#0" expanded="false" />
-                <element signature="n#!!block;n#findRow4Delete#0" expanded="false" />
+                <element signature="e#9291#11761#0" expanded="false" />
+                <element signature="e#9632#11755#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.css">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1717">
-              <caret line="142" column="13" lean-forward="false" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-              <folding>
-                <element signature="e#23#62#0" expanded="false" />
-                <element signature="e#73#123#0" expanded="false" />
-                <element signature="e#133#179#0" expanded="false" />
-                <element signature="e#194#719#0" expanded="false" />
-                <element signature="e#741#829#0" expanded="false" />
-                <element signature="e#968#1079#0" expanded="false" />
-                <element signature="e#1136#1218#0" expanded="false" />
-                <element signature="e#1264#1448#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResoComparator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/service/ResoComparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="350" column="22" lean-forward="false" selection-start-line="350" selection-start-column="22" selection-end-line="350" selection-end-column="22" />
-              <folding>
-                <element signature="docComment;class#ResoComparator#0" expanded="false" />
-                <element signature="method#lightCompare#0;class#ResoComparator#0" expanded="false" />
-                <element signature="method#fullCompare#0;class#ResoComparator#0" expanded="false" />
-                <element signature="e#1148#1174#0" expanded="true" />
-                <element signature="e#1731#1757#0" expanded="true" />
-                <element signature="method#checkMoreOrLess#0;class#ResoComparator#0" expanded="false" />
-                <element signature="method#bonusesCompare#0;class#ResoComparator#0" expanded="false" />
-                <element signature="e#3287#3313#0" expanded="true" />
-                <element signature="method#driversCompare#0;class#ResoComparator#0" expanded="false" />
-                <element signature="e#4798#4824#0" expanded="true" />
-                <element signature="method#partnersCompare#0;class#ResoComparator#0" expanded="false" />
-                <element signature="e#6106#6132#0" expanded="true" />
-                <element signature="method#commonLogsCompare#0;class#ResoComparator#0" expanded="false" />
-                <element signature="e#7413#7439#0" expanded="true" />
-                <element signature="method#fullCompareButOnlyDofference#0;class#ResoComparator#0" expanded="false" />
-                <element signature="e#9194#9220#0" expanded="true" />
-                <element signature="method#wsCalcLogsNewCompare#0;class#ResoComparator#0" expanded="false" />
-                <element signature="e#9902#9928#0" expanded="true" />
-                <element signature="e#11438#11464#0" expanded="true" />
-                <element signature="method#getDescriptionForBonuses#0;class#ResoComparator#0" expanded="false" />
-                <element signature="method#getDescriptionForWsCoeffCalc#0;class#ResoComparator#0" expanded="false" />
-                <element signature="method#getDescriptionForCommonLogs#0;class#ResoComparator#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="237">
+              <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,6 +74,7 @@
       <find>name</find>
       <find>getFullCompare4Coefs</find>
       <find>allresulttable</find>
+      <find>getValuesFrom2LogsByKey</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -187,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/Greeting.java" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/wp/reso-server-interact/1.0.1/reso-server-interact-1.0.1.jar!/ru/reso/wp/srv/ResoObject.class" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/wp/reso-server-interact/1.0.1/reso-server-interact-1.0.1.jar!/ru/reso/wp/srv/ResoRemoteObject.class" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/wp/reso-server-interact/1.0.1/reso-server-interact-1.0.1.jar!/ru/reso/wp/srv/ejb/DatabaseInteractionRemote.class" />
@@ -206,31 +103,32 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/HelloWeb-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/config/WebInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/config/appWebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/controller/RestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/controller/ResoRestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/ComparableValuesList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/CalcID.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/start.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/result.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/HelloMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/CoeffsAndValues.java" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/Factories/ConcreteFactories/WsCoeffCalcFactory.class" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/ComparableValues.java" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/DriverFactory.class" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/DAOUtils.class" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error1.jsp" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/WsCalcLogDao.class" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/main.css" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/WsCalcLogFactory.class" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/mainjs.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fullreport.jsp" />
         <option value="$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/ComplexCompair.class" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/config/appWebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/config/WebInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/controller/ResoRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/CalcID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/CoeffsAndValues.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/ComparableValues.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/ComparableValuesList.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/Greeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/reso/medchat/service/ResoComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/main.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/mainjs.js" />
       </list>
     </option>
   </component>
@@ -297,8 +195,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -410,6 +306,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medchat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringOnGlassfish-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -442,6 +346,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -637,6 +543,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1bc5853d-d3e3-4033-8188-877252cc6502" name="Default" comment="" />
@@ -681,20 +590,22 @@
       <workItem from="1535960562275" duration="21046000" />
       <workItem from="1536059864010" duration="14234000" />
       <workItem from="1536234613233" duration="743000" />
-      <workItem from="1536235507016" duration="3000" />
+      <workItem from="1536235507016" duration="14003000" />
+      <workItem from="1536663029626" duration="1449000" />
+      <workItem from="1536664882136" duration="510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431567000" />
+    <option name="totallyTimeSpent" value="447526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42222223" sideWeight="0.5101279" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.078891255" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0858209" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -703,15 +614,18 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988889" sideWeight="0.4946695" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33777776" sideWeight="0.48987207" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16257995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22814499" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -720,10 +634,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988889" sideWeight="0.4946695" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33777776" sideWeight="0.48987207" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -773,20 +684,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/WsCalcLogDao.class</url>
-          <line>447</line>
-          <properties />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/WsCalcLogDao.class</url>
-          <line>164</line>
-          <properties />
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/ComplexCompair.class</url>
-          <line>34</line>
+          <line>24</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
@@ -797,7 +696,7 @@
           <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="46" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GlassfishConfiguration">
@@ -808,27 +707,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/wp/reso-server-interact/1.0.1/reso-server-interact-1.0.1.jar!/ru/reso/wp/srv/db/ResoDatabaseInvoke.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/wp/reso-server-interact/1.0.1/reso-server-interact-1.0.1.jar!/ru/reso/wp/srv/ejb/DatabaseInteraction.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -857,33 +735,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/Greeting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Entity/WsCalcLogsNew.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="92" column="25" lean-forward="false" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/result.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Entity/WsCalcLogsNew.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/result.jsp" />
     <entry file="file://$PROJECT_DIR$/target/medchat-1.0-SNAPSHOT/images/01.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/01.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -891,50 +745,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/HelloWeb-servlet.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/start.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/start.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/05.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/config/WebInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/config/appWebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="39" column="89" lean-forward="false" selection-start-line="39" selection-start-column="89" selection-end-line="39" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/ComparableValuesList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="38" column="45" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/clipboard-polyfill.promise.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -944,30 +761,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/CalcID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/controller/ResoRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/Factories/ConcreteFactories/WsCoeffCalcFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="155" column="12" lean-forward="false" selection-start-line="155" selection-start-column="12" selection-end-line="155" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/Factories/ConcreteFactories/WsCoeffCalcFactory.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Entity/ComparedParam.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -975,50 +769,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/CoeffsAndValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="103" column="39" lean-forward="true" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/DriverFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/ComparableValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/PartnerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Entity/PartnerUnit.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/DriverFactory.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/PartnerFactory.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Entity/PartnerUnit.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/java/lang/Integer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1033,13 +786,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/CommonLogsFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/CommonLogsFactory.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/java/util/HashMap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1063,98 +810,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/WsCalcLogDao.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/WsCalcLogDao.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/WsCalcLogFactory.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/Factories/MainFactory.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/ComplexCompair.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="635" column="79" lean-forward="false" selection-start-line="635" selection-start-column="79" selection-end-line="635" selection-end-column="79" />
+        <state relative-caret-position="290">
+          <caret line="160" column="25" lean-forward="false" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="142" column="13" lean-forward="false" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-          <folding>
-            <element signature="e#23#62#0" expanded="false" />
-            <element signature="e#73#123#0" expanded="false" />
-            <element signature="e#133#179#0" expanded="false" />
-            <element signature="e#194#719#0" expanded="false" />
-            <element signature="e#741#829#0" expanded="false" />
-            <element signature="e#968#1079#0" expanded="false" />
-            <element signature="e#1136#1218#0" expanded="false" />
-            <element signature="e#1264#1448#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/Factories/MainFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="24" column="55" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/HelloMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#HelloMessage#0" expanded="false" />
-            <element signature="method#getAnyId#0;class#HelloMessage#0" expanded="false" />
-            <element signature="method#parseWS#0;class#HelloMessage#0" expanded="false" />
-            <element signature="method#getSQL#0;class#HelloMessage#0" expanded="false" />
-            <element signature="method#Test#0;class#HelloMessage#0" expanded="false" />
-            <element signature="e#2763#2840#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Utils/Factories/ConcreteFactories/WsCalcLogFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/mainjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="90" column="40" lean-forward="false" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!block;n#linkFunction#0" expanded="false" />
-            <element signature="e#141#680#0" expanded="false" />
-            <element signature="e#199#672#0" expanded="false" />
-            <element signature="e#398#662#0" expanded="false" />
-            <element signature="e#533#644#0" expanded="false" />
-            <element signature="n#!!block;n#alternate2#0" expanded="false" />
-            <element signature="e#831#1493#0" expanded="false" />
-            <element signature="e#977#1487#0" expanded="false" />
-            <element signature="e#1260#1336#0" expanded="false" />
-            <element signature="e#1381#1457#0" expanded="false" />
-            <element signature="n#!!block;n#getHtml#0" expanded="false" />
-            <element signature="n#!!block;n#copyToClipboard#0" expanded="false" />
-            <element signature="e#4041#4221#0" expanded="false" />
-            <element signature="e#4234#4286#0" expanded="false" />
-            <element signature="e#4333#5279#0" expanded="false" />
-            <element signature="n#!!block;n#parseJSONCells#0" expanded="false" />
-            <element signature="e#5407#7793#0" expanded="false" />
-            <element signature="e#5766#7787#0" expanded="false" />
-            <element signature="n#!!block;n#getTableCellValue#0" expanded="false" />
-            <element signature="n#!!block;n#testJSON#0" expanded="false" />
-            <element signature="e#8028#8057#0" expanded="false" />
-            <element signature="e#8062#8123#0" expanded="false" />
-            <element signature="e#8157#8186#0" expanded="false" />
-            <element signature="e#8196#8250#0" expanded="false" />
-            <element signature="e#8269#8298#0" expanded="false" />
-            <element signature="n#!!block;n#setRowPrice#0" expanded="false" />
-            <element signature="n#!!block;n#setTH#0" expanded="false" />
-            <element signature="n#!!block;n#parsePartnersJSONCells#0" expanded="false" />
-            <element signature="e#9337#11376#0" expanded="false" />
-            <element signature="n#!!block;n#getOnlyDifferences#0" expanded="false" />
-            <element signature="n#!!block;n#deleteRow#0" expanded="false" />
-            <element signature="n#!!block;n#findRow4Delete#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,68 +831,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+        <state relative-caret-position="459">
+          <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/config/appWebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/config/WebInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/controller/ResoRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="53" lean-forward="false" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/CalcID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/CoeffsAndValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/ComparableValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fullreport.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+        <state relative-caret-position="289">
+          <caret line="111" column="43" lean-forward="true" selection-start-line="111" selection-start-column="43" selection-end-line="111" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ru/reso/calclog/ResoCalcLog/1.1/ResoCalcLog-1.1.jar!/ru/reso/resocalc/Service/ComplexCompair.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/HelloMessage.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/Greeting.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/service/ResoComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="141" column="51" lean-forward="true" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="629">
+          <caret line="250" column="4" lean-forward="false" selection-start-line="250" selection-start-column="4" selection-end-line="250" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/model/ComparableValuesList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="98" column="99" lean-forward="false" selection-start-line="98" selection-start-column="99" selection-end-line="98" selection-end-column="99" />
+        <state relative-caret-position="-1953">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/05.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/05.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/05.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/mainjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <element signature="method#index#0;class#MainController#0" expanded="false" />
-            <element signature="method#hello#0;class#MainController#0" expanded="false" />
-            <element signature="method#aGet#0;class#MainController#0" expanded="false" />
+            <element signature="n#!!block;n#alternate4#0" expanded="false" />
+            <element signature="n#!!block;n#getHtml#0" expanded="false" />
+            <element signature="n#!!block;n#copyToClipboard#0" expanded="false" />
+            <element signature="e#3022#3202#0" expanded="false" />
+            <element signature="e#3215#3267#0" expanded="false" />
+            <element signature="e#3314#4260#0" expanded="false" />
+            <element signature="n#!!block;n#parseJSONCells#0" expanded="false" />
+            <element signature="e#4784#6805#0" expanded="false" />
+            <element signature="n#!!block;n#getTableCellValue#0" expanded="false" />
+            <element signature="n#!!block;n#testJSON#0" expanded="false" />
+            <element signature="n#!!block;n#setRowPrice#0" expanded="false" />
+            <element signature="n#!!block;n#setTH#0" expanded="false" />
+            <element signature="n#!!block;n#parsePartnersJSONCells#0" expanded="false" />
+            <element signature="e#9291#11761#0" expanded="false" />
+            <element signature="e#9632#11755#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/reso/medchat/service/ResoComparator.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="350" column="22" lean-forward="false" selection-start-line="350" selection-start-column="22" selection-end-line="350" selection-end-column="22" />
-          <folding>
-            <element signature="docComment;class#ResoComparator#0" expanded="false" />
-            <element signature="method#lightCompare#0;class#ResoComparator#0" expanded="false" />
-            <element signature="method#fullCompare#0;class#ResoComparator#0" expanded="false" />
-            <element signature="e#1148#1174#0" expanded="true" />
-            <element signature="e#1731#1757#0" expanded="true" />
-            <element signature="method#checkMoreOrLess#0;class#ResoComparator#0" expanded="false" />
-            <element signature="method#bonusesCompare#0;class#ResoComparator#0" expanded="false" />
-            <element signature="e#3287#3313#0" expanded="true" />
-            <element signature="method#driversCompare#0;class#ResoComparator#0" expanded="false" />
-            <element signature="e#4798#4824#0" expanded="true" />
-            <element signature="method#partnersCompare#0;class#ResoComparator#0" expanded="false" />
-            <element signature="e#6106#6132#0" expanded="true" />
-            <element signature="method#commonLogsCompare#0;class#ResoComparator#0" expanded="false" />
-            <element signature="e#7413#7439#0" expanded="true" />
-            <element signature="method#fullCompareButOnlyDofference#0;class#ResoComparator#0" expanded="false" />
-            <element signature="e#9194#9220#0" expanded="true" />
-            <element signature="method#wsCalcLogsNewCompare#0;class#ResoComparator#0" expanded="false" />
-            <element signature="e#9902#9928#0" expanded="true" />
-            <element signature="e#11438#11464#0" expanded="true" />
-            <element signature="method#getDescriptionForBonuses#0;class#ResoComparator#0" expanded="false" />
-            <element signature="method#getDescriptionForWsCoeffCalc#0;class#ResoComparator#0" expanded="false" />
-            <element signature="method#getDescriptionForCommonLogs#0;class#ResoComparator#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="237">
+          <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

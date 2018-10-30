@@ -1,145 +1,71 @@
-function linkFunction(key) {
-
-    console.log(key);
-    document.getElementById('paste').value = "";
-
-    if (document.getElementsByTagName) {
-
-        var dataForServer = {id: key};
-
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:8080/medchat-1.0-SNAPSHOT/greeting",
-            data: dataForServer,
-            dataType: 'json',
-            success: function (data) {
-                console.log(data);
-
-                //$("#paste").val(data);
-
-                $.each(data, function (index, element) {
-
-
-                    $('#paste').val($('#paste').val() + index + ' - ' + element + '\n');
-
-                });
-
-
-            }
-        });
-    }
-
-
-    //открыть модальное окно с id="myModal"
-
-    $("#myModal").modal('show');
-
-
-}
-
-function alternate2(id) {
-    if (document.getElementsByTagName) {
-        var table = document.getElementById(id);
-        var rows = table.getElementsByTagName("tr");
-        for (i = 0; i < rows.length; i++) {
-
-            // if(i > 1){
-            var cells = table.rows[i].cells[1];
-            console.log(cells.innerHTML);
-
-            var string = cells.innerHTML;
-            var searchNo = "no.png";
-            var searchYes = "yes.png";
-
-
-            if (string.includes(searchNo)) {
-                table.rows[i].style.background = "#FF9999";
-
-            }
-            if (string.includes(searchYes)) {
-                table.rows[i].style.background = "#669966";
-
-            }
-            //   }
-
-        }
-    }
-}
-
+// Основная функция раскраски/сравнения таблиц
 function colorizeAll() {
 
-    alternate3('thetable');
+    alternate3('thetable'); // раскрашиваем основную таблицу Ws Calc Logs
 
     if (document.getElementById("table4Coeff")) {
-        alternate3('table4Coeff');
+        alternate3('table4Coeff'); // раскрашиваем коэфициенты
     }
 
     if (document.getElementById("table4Bonuses")) {
-        alternate3('table4Bonuses');
+        alternate3('table4Bonuses'); // Премии
     }
     if (document.getElementById("table4Drivers")) {
-        alternate4('table4Drivers', 1, 12);
-        parseJSONCells();
+        alternate4('table4Drivers', 1, 12); //Водители. Красим
+        parseJSONCells(); // Водители - парсим JSON - раскидываем по столбцам
     }
 
     if (document.getElementById("table4Partners")) {
-        alternate4('table4Partners', 1, 13);
-        parsePartnersJSONCells();
+        alternate4('table4Partners', 1, 13); //Партнеры
+        parsePartnersJSONCells(); // Партнеры - парсим JSON - раскидываем по столбцам
     }
 
     if (document.getElementById("table4PCommonLogs")) {
-        alternate3('table4PCommonLogs');
+        alternate3('table4PCommonLogs'); //Common Logs
     }
 
 }
 
-function alternate3(id) {
+function alternate3(id) { //Основная функция сравнения и раскраски
     if (document.getElementsByTagName) {
-        var table = document.getElementById(id);
-        var rows = table.getElementsByTagName("tr");
-        for (i = 1; i < rows.length; i++) {
+        var table = document.getElementById(id); //переменная, ссылающаяся на таблицу
+        var rows = table.getElementsByTagName("tr"); //, переменная, ссылающаяся на ряд
+        for (i = 1; i < rows.length; i++) { // бегаем по рядам
 
             // if(i > 1){
-            var cell1 = table.rows[i].cells[1];
-            var cell2 = table.rows[i].cells[2];
-            var string = cell1.innerHTML;
+            var cell1 = table.rows[i].cells[1]; //ячейка 1
+            var cell2 = table.rows[i].cells[2]; //ячейка 2
+            var string = cell1.innerHTML; // их содержимое....
             var string2 = cell2.innerHTML;
 
-            // console.log(cell1.innerHTML);
-            // console.log(cell2.innerHTML);
 
-            if (string.localeCompare(string2) == 0) {
+            if (string.localeCompare(string2) == 0) { //сравнили
 
-                table.rows[i].style.background = "#669966";
+                table.rows[i].style.background = "#669966"; // если равны, то красим зеленым
             } else {
 
-                table.rows[i].style.background = "#FF9999";
+                table.rows[i].style.background = "#FF9999"; //если нет - то красным
             }
 
         }
     }
 }
 
-function alternate4(id, cellind1, cellind2) {
+function alternate4(id, cellind1, cellind2) { //функция раскраски для вертикальных таблиц типа Водители
     if (document.getElementsByTagName) {
         var table = document.getElementById(id);
         var rows = table.getElementsByTagName("tr");
         for (i = 2; i < rows.length; i++) {
 
-            // if(i > 1){
             var cell1 = table.rows[i].cells[cellind1];
             var cell2 = table.rows[i].cells[cellind2];
             var string = cell1.innerHTML;
             var string2 = cell2.innerHTML;
 
-            console.log(cell1.innerHTML);
-            console.log(cell2.innerHTML);
 
             if (string.localeCompare(string2) == 0) {
-
                 table.rows[i].style.background = "#669966";
             } else {
-
                 table.rows[i].style.background = "#FF9999";
             }
 
@@ -147,21 +73,18 @@ function alternate4(id, cellind1, cellind2) {
     }
 }
 
+// функция отображения окна копирования результата
 function getHtml() {
 
-    console.log('ITS WORK!');
+    var $div = $('#fullRezult'); // обозначили все содеражимое, все таблички
+    var y = $div.html(); // пихнули в переменную
 
-    //var $div = $('#allresulttable');
-    var $div = $('#fullRezult');
-
-    var y = $div.html();
-
-
-    $("#myModal2").modal('show');
+    $("#myModal2").modal('show'); // отобразили окно
     $('#paste').val(y);
 
 }
 
+//Выделение и копирование в буфер
 function copyToClipboard() {
 
     console.log('Trying to copy!');
@@ -219,12 +142,11 @@ function copyToClipboard() {
     // }
 }
 
+// Берем JSON из ячейки и раскидываем по ячейкам справа. Только для таблички Drivers (скорее всего под удаление)
 function parseJSONCells() {
 
-    // console.log('Мы в ПарсДжсон');
-
     $('#table4Drivers tr td').each(function () {
-        //    console.log('Мы в ич');
+
         var columnIndex = $(this).parent().children().index($(this));
         var rowIndex = $(this).parent().parent().children().index($(this).parent());
 
@@ -264,18 +186,17 @@ function parseJSONCells() {
 
 }
 
+// возвращает значение ячейки по id таблицы, номеру столца и ряда
 function getTableCellValue(tableId, rowIndex, columnIndex) {
     var cell = $('#' + tableId + ' tr').eq(rowIndex).find('td').eq(columnIndex)
     return cell.text();
 }
 
+// Функция проверяющая - это вообще Json или нет
 function testJSON(text) {
     if (typeof text !== "string") {
         return false;
     }
-    /*if (text.charAt(0) !== '{') {
-        return false;
-    }*/
 
     if (text.indexOf("{") <= 0) {
         return false;
@@ -290,11 +211,13 @@ function testJSON(text) {
     }
 }
 
+// устанавливает заданное в параметрах значение ячейки (для копирования туда значения)
 function setRowPrice(tableId, rowIndex, columnIndex, offset, newvalue) {
     columnIndex = columnIndex + offset;
     $('#' + tableId + ' tr').eq(rowIndex).find('td').eq(columnIndex).html(newvalue);
 };
 
+// меняет заголовок. Имя ключа JSON надо пихнуть в заголовок
 function setTH(tableId, rowIndex, columnIndex, offset, newvalue) {
     columnIndex = columnIndex + offset;
     var thv = $('#' + tableId + ' tr').eq(rowIndex).find('th').eq(columnIndex).text();
@@ -302,25 +225,34 @@ function setTH(tableId, rowIndex, columnIndex, offset, newvalue) {
     $('#' + tableId + ' tr').eq(rowIndex).find('th').eq(columnIndex).html('<span>' + newvalue + '</span>');
 };
 
+/* Парсим JSON для партнеров и копируем в соседние ячейки.
+-------------------------------------------------------------
+
+Суть там такая, кто не понял. Надо как-то передать вертикальную структуру таблицы, не ломая сложившуюся систему интерфейсов на сервере. Решил, что группу
+ полей на сервере проще пихнуть как одно значение, сформировав из него JSON. А что тогда будет ключом? В табличке Drivers нет вообще id. То есть 10 значений,
+ грубо говоря, имеют 10 одинаковых calc id. Мапа не поддерживает одинаковые ключи (они перезаписываются). Что делать? Вводить в табличку поле? Я решил, что я не админ,
+ чтобы лезть в табличку.  При этом группу полей, представляющих водителя с добавлением некого ручного итератор можно выразить как ключ. Что-то типа i-name-birthday-somefield
+ , которое потом тоже при желании можно распарсить. То есть это ключ. А в значение... одно единственное.... чтобы делать сравнение с другим таким же значением по другому calc id,
+ ... мы формируем в JSON'е из группы других полей. А здесь - на клиенте мы это распарсиваем и распихиваем по полям.
+
+ -------------------------------------------------------------
+
+ */
 function parsePartnersJSONCells() {
 
-    console.log('Мы в ПарсДжсон для ПАРТНЕРОВ');
+    $('#table4Partners tr td').each(function () { //бегаем по табличке
 
-    $('#table4Partners tr td').each(function () {
-        console.log('Мы в ич');
-        var columnIndex = $(this).parent().children().index($(this));
-        var rowIndex = $(this).parent().parent().children().index($(this).parent());
-
-
+        var columnIndex = $(this).parent().children().index($(this)); //берем индекс столбца
+        var rowIndex = $(this).parent().parent().children().index($(this).parent()); // берем индекс строки
         var strJSON3 = getTableCellValue('table4Partners', rowIndex, columnIndex);
-        console.log('Value is ' + strJSON3);
-        if (testJSON(strJSON3)) {
-            console.log('THIS - ' + columnIndex + " : " + strJSON3);
-            var data = JSON.parse(strJSON3);
 
-            setRowPrice('table4Partners', rowIndex, columnIndex, 1, data.DOCISSUEDATE);
-            setTH('table4Partners', 1, columnIndex, 0, 'DOCISSUEDATE'); //th
-            setRowPrice('table4Partners', rowIndex, columnIndex, 2, data.DOCSERIA);
+        if (testJSON(strJSON3)) { // ... Если это JSON
+
+            var data = JSON.parse(strJSON3); // парсим его...
+
+            setRowPrice('table4Partners', rowIndex, columnIndex, 1, data.DOCISSUEDATE); // устанавливаем значение ячейки в следующем столбце
+            setTH('table4Partners', 1, columnIndex, 0, 'DOCISSUEDATE'); //и ставим ему заголовок
+            setRowPrice('table4Partners', rowIndex, columnIndex, 2, data.DOCSERIA); // ......... ну и так далее.............
               setTH('table4Partners', 1, columnIndex, 1, 'DOCSERIA'); //th
             setRowPrice('table4Partners', rowIndex, columnIndex, 3, data.VIPCLIENT);
               setTH('table4Partners', 1, columnIndex, 2, 'VIPCLIENT'); //th
@@ -349,53 +281,8 @@ function parsePartnersJSONCells() {
 
 }
 
-function getOnlyDifferences() {
-
-    console.log('Get Only Differences');
-    alert('Get Only Differences');
-
-     //   $(this).parents('tr').remove();
-    findRow4Delete('thetable');
 
 
-}
-
-function deleteRow(table, row) {
-    document.getElementById(table).deleteRow(row);
-}
-
-function findRow4Delete(table) {
-
-    var table = document.getElementById(table);
-    var rows = table.getElementsByTagName("tr");
-    for (i = 1; i < rows.length; i++) {
-
-        /*if (table.rows[i].style.background = "#FF9999"){
-
-*/
-            var cell1 = table.rows[i].cells[1];
-            var cell2 = table.rows[i].cells[2];
-            var string = cell1.innerHTML;
-            var string2 = cell2.innerHTML;
-
-
-        if (string.localeCompare(string2) == 0) {
-
-            table.deleteRow(i);
-
-        } else {
-
-            console.log(cell1.innerHTML);
-            console.log(cell2.innerHTML);
-
-
-        }
-
-
-
-    }
-
-}
 
 
 

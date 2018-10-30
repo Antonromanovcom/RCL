@@ -1,10 +1,15 @@
 package ru.reso.medchat.model;
 
+/**
+ * @author ROMAB
+ *
+ * Класс для связи с Моделью (jsp)/ То есть для передачи calc id 1 и calc id 2 ....
+ */
 public class CalcID {
 
     private Integer calcIdFirst;
     private Integer calcIdSecond;
-    private Integer type;
+    private Integer type; // тип отчета
 
 
 

@@ -44,8 +44,7 @@
             <td>Тип проверки</td>
             <td style="text-align: left; padding-left: 170px">
                 <form:radiobutton path="type" value="1" /> Полная проверка <br>
-                <form:radiobutton path="type" value="2" /> Light-версия<br>
-                <form:radiobutton path="type" value="3" /> Только различия</td>
+                <form:radiobutton path="type" value="2" /> Только различия</td>
             <td></td>
         </tr>
         <tr>

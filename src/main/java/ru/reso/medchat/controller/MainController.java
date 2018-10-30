@@ -1,209 +1,164 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ru.reso.medchat.controller;
-
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ru.reso.medchat.model.ComparableValues;
-import ru.reso.medchat.model.ComparableValuesList;
 import ru.reso.medchat.service.ResoComparator;
 import ru.reso.medchat.model.CalcID;
-import ru.reso.medchat.model.HelloMessage;
-
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * @author ROMAB
+ * <p>
+ * Это основной контроллер, который как раз и обрабатывает все перемещения по страничкам сервиса.
  */
 @Controller
 public class MainController {
 
 
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(ModelMap map) {
-        //map.put("msg", "Hello Spring 4 Web MVC!");
         return "start";
     }
 
-    @RequestMapping(value = "/hi", method = RequestMethod.GET)
-    public String hello(ModelMap map) {
 
-        HelloMessage helloMessage = new HelloMessage();
-        String name = "1";
-        map.put("msg", helloMessage.Test());
-        return "test";
-
-    }
-
-    @RequestMapping(value = "/a", method = RequestMethod.GET)
-    public String aGet() {
-
-        //HelloMessage helloMessage = new HelloMessage();
-        String name = "1";
-        //map.put("msg", helloMessage.Test());
-        return name;
-
-    }
-
+    /**
+     * Основной по сути метод, выдающий собственно результаты...
+     *
+     * @param calcID - класс, инкапсулирующий calcid 1 и calcid 2
+     * @param result
+     * @param model  - модель - связующее звено между сервером и контентом JSP-страницы.
+     * @return - а возвращаем мы собственно ссылку на страницу как редирект.
+     */
     @RequestMapping(value = "/he", method = RequestMethod.POST)
     public String submit(@ModelAttribute("CalcId") CalcID calcID, BindingResult result, ModelMap model) {
-        String returnURL = "result";
-        System.out.println("Зашли сюда....");
+
+        String returnURL = "result"; // изначальная ссылка на страницу
 
         model.addAttribute("calcid1", calcID.getCalcId());
         model.addAttribute("calcid2", calcID.getCalcIdSecond());
-        model.addAttribute("type", calcID.getType());
+        model.addAttribute("type", calcID.getType()); // тип отчета, который хотим увидеть
+
+        if ((calcID.getType() == null) || (calcID.getCalcId() == null) || (calcID.getCalcIdSecond() == null)) { // проверка чтобы был выбран ТИП и calcid (оба) не были пустыми
+            return "error1"; // если пустые, то переадресовываем на страничку ошибки.
+        } else {
 
 
+            /**
+             * В этом коммите (и последующих) я убрал Light-версию отчета, ибо как оказалось, показывать просто результат сравнения без занчений не нужно.
+             */
 
-        if ((calcID.getType()==null) ||(calcID.getCalcId()==null) || (calcID.getCalcIdSecond()==null)){
-            return "error1";
-        } else{
+            ResoComparator resoComparator = new ResoComparator();
+
+            // Смотрим какой тип отчета выбран:
+            switch (calcID.getType()) {
+                case 1:
+                    // Проверяем не больше ли у нас значений в коэфициентах по calcid 2 чем по calcid 1. Если больше, меняем местами....
+                    if ((resoComparator.checkMoreOrLess(calcID.getCalcId(), calcID.getCalcIdSecond())) == 2) {
+                        model.addAttribute("calcid1", calcID.getCalcIdSecond());
+                        model.addAttribute("calcid2", calcID.getCalcId());
+                    }
+
+                    // Наполняем ХэшМеп WsCalcLog
+                    LinkedHashMap<String, ComparableValues> fullCompareResult = resoComparator.wsCalcLogsNewCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
+                    // Наполняем ХэшМеп Коэфициентов
+                    LinkedHashMap<String, ComparableValues> fullCoefsCompareResult = resoComparator.coeffCompare2(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
+
+                    // Проверяем не пустой ли ХэшМеп
+                    if (fullCoefsCompareResult.isEmpty()) {
+                        fullCoefsCompareResult.clear();
+                    }
+
+                    // Наполняем Премии
+                    LinkedHashMap<String, ComparableValues> bonuses = resoComparator.bonusesCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
+
+                    if (bonuses.isEmpty()) {
+                        bonuses.clear();
+                    }
+
+                    // Наполняем Водителей
+                    LinkedHashMap<String, ComparableValues> drivers = resoComparator.driversCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
+
+                    if (drivers.isEmpty()) {
+                        drivers.clear();
+                    }
+
+                    // Наполняем Партнеров
+                    LinkedHashMap<String, ComparableValues> partners = resoComparator.partnersCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
+
+                    if (partners.isEmpty()) {
+                        partners.clear();
+                    }
 
 
-        //1 - full
-        //2 - light
+                    // Наполняем Common Logs
+                    LinkedHashMap<String, ComparableValues> commonLogs = resoComparator.commonLogsCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
 
-        ResoComparator resoComparator = new ResoComparator();
+                    if (commonLogs.isEmpty()) {
+                        commonLogs.clear();
+                    }
+
+                    // А дальше все это заливаем в Model для, собственно, отражения на Моделе
+                    model.addAttribute("map", fullCompareResult);
+                    model.addAttribute("coefs", fullCoefsCompareResult);
+                    model.addAttribute("bonuses", bonuses);
+                    model.addAttribute("drivers", drivers);
+                    model.addAttribute("partners", partners);
+                    model.addAttribute("commonLogs", commonLogs);
 
 
-    switch (calcID.getType()) {
-        case 1:
-            System.out.println("Type выбран - " + calcID.getType());
+                    returnURL = "fullreport";
+                    break;
 
 
-            if ((resoComparator.checkMoreOrLess(calcID.getCalcId(), calcID.getCalcIdSecond())) == 2) {
-                model.addAttribute("calcid1", calcID.getCalcIdSecond());
-                model.addAttribute("calcid2", calcID.getCalcId());
+                case 2: // отображдение только несоответствий
+
+                    // Так же меняем местами в случае несоответствия записей для коэфициентов по кальк-айди
+                    if ((resoComparator.checkMoreOrLess(calcID.getCalcId(), calcID.getCalcIdSecond())) == 2) {
+                        model.addAttribute("calcid1", calcID.getCalcIdSecond());
+                        model.addAttribute("calcid2", calcID.getCalcId());
+                    }
+
+                    // наполняем ХэшМепы
+                    LinkedHashMap<String, ComparableValues> fullCompareResultButOnlyDifferences = resoComparator.wsCalcLogsNewCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
+                    LinkedHashMap<String, ComparableValues> fullCoefsCompareResultButOnlyDifferences = resoComparator.coeffCompare2(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
+                    LinkedHashMap<String, ComparableValues> bonusesOnlyDifference = resoComparator.bonusesCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
+                    LinkedHashMap<String, ComparableValues> driversOnlyDifference = resoComparator.driversCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
+
+
+                    if (driversOnlyDifference.isEmpty()) {
+                        driversOnlyDifference.clear();
+                    }
+
+
+                    LinkedHashMap<String, ComparableValues> partnersOnlyDifference = resoComparator.partnersCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
+
+                    if (partnersOnlyDifference.isEmpty()) {
+                        partnersOnlyDifference.clear();
+                    }
+
+                    LinkedHashMap<String, ComparableValues> commonLogsOnlyDifference = resoComparator.commonLogsCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
+
+                    model.addAttribute("map", fullCompareResultButOnlyDifferences);
+                    model.addAttribute("coefs", fullCoefsCompareResultButOnlyDifferences);
+                    model.addAttribute("bonuses", bonusesOnlyDifference);
+                    model.addAttribute("drivers", driversOnlyDifference);
+                    model.addAttribute("partners", partnersOnlyDifference);
+                    model.addAttribute("commonLogs", commonLogsOnlyDifference);
+                    returnURL = "fullreport";
+                    break;
             }
-
-            //LinkedHashMap<String, ComparableValues> fullCompareResult = resoComparator.fullCompare(calcID.getCalcId(), calcID.getCalcIdSecond());
-            LinkedHashMap<String, ComparableValues> fullCompareResult = resoComparator.wsCalcLogsNewCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
-            //LinkedHashMap<String, ComparableValues> fullCoefsCompareResult = resoComparator.coeffCompare(calcID.getCalcId(), calcID.getCalcIdSecond(),1);
-            LinkedHashMap<String, ComparableValues> fullCoefsCompareResult = resoComparator.coeffCompare2(calcID.getCalcId(), calcID.getCalcIdSecond(),1);
-
-
-            if (fullCoefsCompareResult.isEmpty()) {
-                System.out.println("fullCoefsCompareResult is NULL");
-                fullCoefsCompareResult.clear();
-            }
-
-
-            LinkedHashMap<String, ComparableValues> bonuses = resoComparator.bonusesCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
-
-            if (bonuses.isEmpty()) {
-                System.out.println("bonuses is NULL");
-                bonuses.clear();
-            }
-
-            LinkedHashMap<String, ComparableValues> drivers = resoComparator.driversCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
-
-
-            if (drivers.isEmpty()) {
-                System.out.println("DRIVERS is NULL");
-                drivers.clear();
-            }
-
-                /*for (String name : drivers.keySet()) {
-
-                    String key = name;
-                    ComparableValues value = drivers.get(name);
-                    System.out.println(key + " -  " + value.getValue1());
-                    //     Logger.getLogger("").log(Level.SEVERE, key + " -  " + value, "Инфо");
-                } */
-
-
-            LinkedHashMap<String, ComparableValues> partners = resoComparator.partnersCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
-
-            if (partners.isEmpty()) {
-                System.out.println("PARTNERS is NULL");
-                partners.clear();
-            }
-
-
-            LinkedHashMap<String, ComparableValues> commonLogs = resoComparator.commonLogsCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
-
-            if (commonLogs.isEmpty()) {
-                System.out.println("commonLogs is NULL");
-                commonLogs.clear();
-            }
-
-            model.addAttribute("map", fullCompareResult);
-            model.addAttribute("coefs", fullCoefsCompareResult);
-            model.addAttribute("bonuses", bonuses);
-            model.addAttribute("drivers", drivers);
-            model.addAttribute("partners", partners);
-            model.addAttribute("commonLogs", commonLogs);
-
-
-            returnURL = "fullreport";
-            break;
-
-        case 2:
-            System.out.println("Type выбран - " + calcID.getType());
-            LinkedHashMap<String, Integer> lightCompareResult = resoComparator.lightCompare(calcID.getCalcId(), calcID.getCalcIdSecond());
-            model.addAttribute("map", lightCompareResult);
-            break;
-
-        case 3:
-            System.out.println("Type выбран - " + calcID.getType());
-
-            if ((resoComparator.checkMoreOrLess(calcID.getCalcId(), calcID.getCalcIdSecond())) == 2) {
-                model.addAttribute("calcid1", calcID.getCalcIdSecond());
-                model.addAttribute("calcid2", calcID.getCalcId());
-            }
-
-            LinkedHashMap<String, ComparableValues> fullCompareResultOnlyDifference = resoComparator.fullCompareButOnlyDofference(calcID.getCalcId(), calcID.getCalcIdSecond());
-            LinkedHashMap<String, ComparableValues> fullCompareCoefsOnlyDifference = resoComparator.coeffCompare(calcID.getCalcId(), calcID.getCalcIdSecond(),2);
-            LinkedHashMap<String, ComparableValues> bonusesOnlyDifference = resoComparator.bonusesCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
-            LinkedHashMap<String, ComparableValues> driversOnlyDifference = resoComparator.driversCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
-
-
-            if (driversOnlyDifference.isEmpty()) {
-                System.out.println("DRIVERS is NULL");
-                driversOnlyDifference.clear();
-            }
-
-
-            LinkedHashMap<String, ComparableValues> partnersOnlyDifference = resoComparator.partnersCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
-
-            if (partnersOnlyDifference.isEmpty()) {
-                System.out.println("DRIVERS is NULL");
-                partnersOnlyDifference.clear();
-            }
-
-            LinkedHashMap<String, ComparableValues> commonLogsOnlyDifference = resoComparator.commonLogsCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 2);
-
-            model.addAttribute("map", fullCompareResultOnlyDifference);
-            model.addAttribute("coefs", fullCompareCoefsOnlyDifference);
-            model.addAttribute("bonuses", bonusesOnlyDifference);
-            model.addAttribute("drivers", driversOnlyDifference);
-            model.addAttribute("partners", partnersOnlyDifference);
-            model.addAttribute("commonLogs", commonLogsOnlyDifference);
-            returnURL = "fullreport";
-            break;
-    }
         }
 
         return returnURL;
     }
 
+    //Переход на страницу ввода calc id и выбора типа отчетов
     @RequestMapping(value = "/ho", method = RequestMethod.GET)
     public ModelAndView showForm() {
         return new ModelAndView("index", "CalcId", new CalcID());

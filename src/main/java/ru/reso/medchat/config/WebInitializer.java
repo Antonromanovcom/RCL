@@ -2,14 +2,16 @@ package ru.reso.medchat.config;
 
 import javax.servlet.ServletContext;  
 import javax.servlet.ServletException;  
-import javax.servlet.ServletRegistration.Dynamic;  
-  
+import javax.servlet.ServletRegistration.Dynamic;
 import org.springframework.web.WebApplicationInitializer;  
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;  
-import org.springframework.web.servlet.DispatcherServlet;  
-  
+import org.springframework.web.servlet.DispatcherServlet;
+
+/**
+ * Это то, что раньше делалось в файла servlet-dispatcher
+ */
 public class WebInitializer implements WebApplicationInitializer {
-    //public class WebInitializer {
+
     
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
