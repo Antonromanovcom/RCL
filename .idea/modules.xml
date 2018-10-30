@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/medchat.iml" filepath="$PROJECT_DIR$/medchat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ResoCalcLog.iml" filepath="$PROJECT_DIR$/.idea/ResoCalcLog.iml" />
     </modules>
   </component>
 </project>
