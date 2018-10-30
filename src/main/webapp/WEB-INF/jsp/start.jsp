@@ -6,11 +6,8 @@
 <html lang="en">
 <head>
 
-    <!-- Access the bootstrap Css like this,
-        Spring boot will handle the resource mapping automcatically -->
-    <spring:url value="/resources/js/yes.png" var="m1" />
-    <spring:url value="/resources/js/reso.ico" var="ico" />
-    <spring:url value="/resources/js/main.css" var="mainCss" />
+    <spring:url value="/resources/images/reso.ico" var="ico" />
+    <spring:url value="/resources/css/main.css" var="mainCss" />
 
     <link href="${mainCss}" rel="stylesheet" />
     <link rel="shortcut icon" href="${ico}" type="image/x-icon" />

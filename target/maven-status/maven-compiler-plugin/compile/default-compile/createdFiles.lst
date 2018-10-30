@@ -1,9 +1,8 @@
-ru\reso\medchat\model\ComparableValuesList.class
-ru\reso\medchat\model\CoeffsAndValues.class
-ru\reso\medchat\model\ComparableValues.class
-ru\reso\medchat\controller\MainController.class
-ru\reso\medchat\config\appWebConfig.class
-ru\reso\medchat\controller\ResoRestController.class
-ru\reso\medchat\model\CalcID.class
-ru\reso\medchat\config\WebInitializer.class
-ru\reso\medchat\service\ResoComparator.class
+ru\reso\RCL\model\CoeffsAndValues.class
+ru\reso\RCL\config\WebInitializer.class
+ru\reso\RCL\config\appWebConfig.class
+ru\reso\RCL\controller\ResoRestController.class
+ru\reso\RCL\model\CalcID.class
+ru\reso\RCL\service\ResoComparator.class
+ru\reso\RCL\model\ComparableValues.class
+ru\reso\RCL\controller\MainController.class

@@ -10,7 +10,7 @@
 
     <spring:url value="/resources/js/yes.png" var="yesimg"/>
     <spring:url value="/resources/js/no.png" var="noimg"/>
-    <spring:url value="/resources/js/main.css" var="mainCss"/>
+    <spring:url value="/resources/css/main.css" var="mainCss"/>
     <spring:url value="/resources/js/mainjs.js" var="mainjs"/>
     <spring:url value="/resources/js/reso.ico" var="ico"/>
 

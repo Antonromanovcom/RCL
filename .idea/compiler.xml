@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="medchat" />
+        <module name="RCL" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="medchat" target="1.8" />
+      <module name="RCL" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

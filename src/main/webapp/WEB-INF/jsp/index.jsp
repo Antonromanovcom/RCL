@@ -6,8 +6,8 @@
 <html lang="en">
 <head>
 
-    <spring:url value="/resources/js/main.css" var="mainCss" />
-    <spring:url value="/resources/js/reso.ico" var="ico" />
+    <spring:url value="/resources/css/main.css" var="mainCss" />
+    <spring:url value="/resources/images/reso.ico" var="ico" />
 
     <link href="${mainCss}" rel="stylesheet" />
     <link rel="shortcut icon" href="${ico}" type="image/x-icon" />
