@@ -1,3 +1,3 @@
 # RCL
 
-1.3 (try to add reso-interact-functionality)
+1.4 (real working SPRING version (not SPRING BOOT) with reso-server-interact)

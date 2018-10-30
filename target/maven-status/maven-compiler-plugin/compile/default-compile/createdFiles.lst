@@ -1,2 +1,5 @@
-ru\reso\comparator\controller\WebRestController.class
-ru\reso\comparator\Main.class
+ru\reso\medchat\config\appWebConfig.class
+ru\reso\medchat\model\Greeting.class
+ru\reso\medchat\config\WebInitializer.class
+ru\reso\medchat\model\HelloMessage.class
+ru\reso\medchat\controller\MainController.class
