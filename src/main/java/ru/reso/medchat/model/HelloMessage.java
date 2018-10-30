@@ -14,8 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 import static ru.reso.resocalc.Service.WsCalcLogDao.getLogByCalcID;
-import static ru.reso.resocalc.Service.WsCalcLogDao.testLogByCalcID;
-import static ru.reso.resocalc.Service.WsCalcLogDao.testPing;
+import static ru.reso.resocalc.Service.WsCalcLogDao.paramListGenerator;
 import static ru.reso.wp.srv.db.ResoDatabaseInvoke.decodeWebRowSet;
 
 /**
@@ -33,7 +32,7 @@ public class HelloMessage extends ResoRemoteObject {
     }
 
 
-    public String getCalcLog() {
+    /* public String getCalcLog() {
 
         //String sql = "select t.agentid from webauto.ws_calc_logs t where t.calcid = ?";
         //String sql = "select t.agentid from webauto.ws_calc_logs_new@osago t where t.calcid = ?";
@@ -41,15 +40,22 @@ public class HelloMessage extends ResoRemoteObject {
         String sql = "select t.insurantid from  webauto.WS_CALC_LOGS_NEW t where t.calcid=?";
         //String sql = " select * from WS_CALC_LOGS_NEW t  where t.calcid = ?";
         return testPing(sql);
-    }
+    } */
 
     public WsCalcLogsNew getLog() {
-        return getLogByCalcID(122865181);
+        Long calc =  122865290L;
+        //paramListGenerator();
+        return getLogByCalcID(calc);
     }
 
-    public String testLog() {
-        return testLogByCalcID(122865181);
+    public String parseWS(WsCalcLogsNew ws) {
+        Long calc =  122865290L;
+        return String.valueOf(paramListGenerator(ws, calc));
     }
+
+    /*public String testLog() {
+        return testLogByCalcID(122865181);
+    } */
 
 
 
@@ -83,11 +89,16 @@ public class HelloMessage extends ResoRemoteObject {
         } */
 
         String fromLog = this.getLog().getCarbrandname();
+        String parse = this.parseWS(this.getLog());
+
+
         //test = test + " - " + this.getCalcLog() + " - " + fromLog;
         //test = test + " - " + this.testLog() + " : " + res;
         //test = test + " - " + this.testLog();
         //test = test  + " : " + res;
-        test = "WsCalcLogsNew - " + fromLog;
+        //test = "WsCalcLogsNew - " + fromLog;
+        test = "WsCalcLogsNew - " + parse;
+
 
         return test;
 
