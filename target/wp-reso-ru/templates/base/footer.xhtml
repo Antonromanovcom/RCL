@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: kajam
+  Date: 04.04.2018
+  Time: 11:13
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+
+    <ui:composition>
+        <!-- Global constants -->
+        <p:importConstants type="ru.reso.wp.consts.Consts" var="consts"/>
+
+        <div class="ml-auto">
+            <a href="#{consts.SITE_URL}">#{messages.CompanyName}</a>
+            <span>&#xA9; #{consts.CURRENT_YEAR}.</span>
+            <span>#{messages.PowerBy}</span>
+        </div>
+
+    </ui:composition>
+
+</h:body>
+
+</html>

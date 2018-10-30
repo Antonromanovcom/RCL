@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <property name="LogFilePath">${sys:catalina.home}/logs/WpResoRu.log</property>
+        <property name="PatternTemplateConsole">%d %-5p {%c} %m%n</property>
+        <property name="PatternTemplateShort">%d %p %c{1.} [%t] %m%n</property>
+        <property name="PatternTemplate">%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</property>
+        <property name="PatternTemplateFull">%d{ABSOLUTE} %5p %t %c{10}:%M:%L - %m%n</property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${PatternTemplateConsole}"/>
+        </Console>
+
+        <RollingFile name="RollingFile" fileName="${LogFilePath}"
+                     filePattern="${LogFilePath}.%d{yyyy-MM-dd}">
+            <PatternLayout pattern="${PatternTemplateFull}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="20 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="ru.reso.wp" level="info"/>
+
+        <Root level="warn">
+            <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

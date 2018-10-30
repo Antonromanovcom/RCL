@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:body>
+    <ui:composition template="/templates/admin/templateAdminPage.xhtml">
+
+        <ui:define name="content">
+
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card-group">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <h:form prependId="false">
+                                    <h2>#{messages.ConfirmCode}</h2>
+
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                          <i class="icon-lock"></i>
+                                        </span>
+                                        </div>
+                                        <input class="form-control"/>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p:commandButton value="#{messages.Back}" action="#{userBean.back}" styleClass="btn btn-primary px-4" />
+                                        </div>
+                                        <div class="col-6">
+                                            <p:commandButton value="#{messages.Confirm}" action="#{userBean.confirm}" styleClass="btn btn-success px-4" />
+                                        </div>
+                                    </div>
+                                </h:form>
+                            </div>
+                        </div>
+                        <div class="card text-white bg-success py-5 d-md-down-none" style="width:44%">
+                            <div class="card-body text-center">
+                                <div>
+                                    <h2>Информация</h2>
+                                    <p>Введите код подтверждения, отравленный Вам на номер сотового телефона или введите код из приложения РЕСО-код.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </ui:define>
+
+    </ui:composition>
+</h:body>
+
+</html>

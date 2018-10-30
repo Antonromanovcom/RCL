@@ -1,0 +1,38 @@
+.reso-header {
+  margin-top: 10px;
+}
+
+.logo {
+  background: url("#{resource['img/logo_reso.png']}") 0 0 no-repeat;
+  height: 50px;
+  width: 200px;
+}
+
+
+.logo-note-line-1 {
+  color: #4dbd74;
+  font-size: 32px;
+  line-height: 16px;
+  font-weight: bold;
+  padding: 3px 0 0;
+  margin: 0 0 -3px;
+}
+
+.logo-note-line-2 {
+  color: #979797;
+  font-size: 21px;
+  line-height: 48px;
+}
+
+.h-phone {
+  color: #379457;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.h-phone-1 {
+  float: right;
+  height: 20px;
+  /*border-left: 1px solid #d9d9d9;*/
+  padding: 0 0 0 21px;
+}

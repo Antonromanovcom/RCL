@@ -1,0 +1,108 @@
+/*
+Icon get from site http://simplelineicons.com/
+Types: title, item
+Action: url page
+*/
+
+{
+  "menu-items": [
+    {
+      "type": "item",
+      "name": "Главная",
+      "icon": "icon-home",
+      "action": "main.xhtml",
+      "disabled": "false",
+      "rendered": "true"
+    },
+    {
+      "type": "title",
+      "name": "Продукты",
+      "icon": "icon-diamond",
+      "disabled": "false",
+      "rendered": "true"
+    },
+    {
+      "type": "item",
+      "name": "ОСАГО",
+      "icon": "icon-speedometer",
+      "action": "#",
+      "disabled": "false",
+      "rendered": "true",
+      "items": [
+        {
+          "type": "item",
+          "name": "Список",
+          "icon": "icon-list",
+          "action": "main.xhtml",
+          "disabled": "false",
+          "rendered": "true"
+        },
+        {
+          "type": "item",
+          "name": "Оформить",
+          "icon": "icon-note",
+          "action": "main.xhtml",
+          "disabled": "false",
+          "rendered": "true"
+        },
+        {
+          "type": "item",
+          "name": "КБМ",
+          "icon": "icon-star",
+          "action": "main.xhtml",
+          "disabled": "false",
+          "rendered": "true"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "КАСКО",
+      "icon": "icon-speedometer",
+      "action": "#",
+      "disabled": "false",
+      "rendered": "true",
+      "items": [
+        {
+          "type": "item",
+          "name": "Калькулятор",
+          "icon": "icon-calculator",
+          "action": "main.xhtml",
+          "disabled": "false",
+          "rendered": "true"
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "name": "Информация",
+      "icon": "icon-diamond",
+      "disabled": "false",
+      "rendered": "true"
+    },
+    {
+      "type": "item",
+      "name": "Акции",
+      "icon": "icon-present",
+      "action": "main.xhtml",
+      "disabled": "false",
+      "rendered": "true"
+    },
+    {
+      "type": "item",
+      "name": "Новости",
+      "icon": "icon-info",
+      "action": "main.xhtml",
+      "disabled": "false",
+      "rendered": "true"
+    },
+    {
+      "type": "item",
+      "name": "Отчеты",
+      "icon": "icon-folder-alt",
+      "action": "main.xhtml",
+      "disabled": "false",
+      "rendered": "true"
+    }
+  ]
+}

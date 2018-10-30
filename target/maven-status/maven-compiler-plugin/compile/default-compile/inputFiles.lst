@@ -1,2 +1,25 @@
-D:\Anton\Coding\RESO COMPARATOR\1.0 (start)\src\main\java\ru\reso\comparator\Main.java
-D:\Anton\Coding\RESO COMPARATOR\1.0 (start)\src\main\java\ru\reso\comparator\controller\WebRestController.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\base\MenuFactory.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\base\MenuHandler.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\base\MenuData.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\filters\RequestFilter.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\consts\UIConsts.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\renderer\UIMainMenuBean.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\msgs\Messages.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\templates\TemplateSessionBean.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\admin\ui\UIAdminEmployee.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\MainMenuData.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\renderer\UIMainMenuSeparator.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\base\BaseMenuItem.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\renderer\MenuRenderer.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\base\BaseMenu.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\MainMenuItem.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\MainMenu.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\utils\JSFUtils.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\renderer\UIMainMenuSubmenu.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\base\ResoBean.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\test\TestCDIBean.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\MainMenuFactory.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\consts\Consts.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\MainMenuHandler.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\admin\UserBean.java
+C:\GIT\ResoProjects\wp-reso-ru\src\main\java\ru\reso\wp\ui\main_menu\renderer\UIMainMenuItem.java

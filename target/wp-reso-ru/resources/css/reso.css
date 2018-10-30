@@ -1,0 +1,55 @@
+.reso-header {
+    margin-top: 10px;
+}
+
+.logo {
+    background: url("#{resource['img/logo_reso.png']}") 0 0 no-repeat;
+    height: 50px;
+    width: 200px;
+}
+
+.logo-note-wp {
+    color: #4dbd74;
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: bold;
+    padding: 3px 0 0;
+    margin: 0 0 -3px;
+}
+
+.logo-note-line-1 {
+    color: #4dbd74;
+    font-size: 32px;
+    line-height: 32px;
+    /*font-weight: bold;*/
+    padding: 3px 0 0;
+    margin: 0 0 5px;
+}
+
+.logo-note-line-2 {
+    color: #979797;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.h-phone {
+    color: #379457;
+    font-size: 28px;
+    line-height: 24px;
+}
+
+.h-phone-code{
+    color: #979797;
+    font-size: 1rem;
+}
+
+.h-phone-1, .h-phone-2{
+    float: right;
+    height: 20px;
+    /*border-left: 1px solid #d9d9d9;*/
+    padding: 0 0 0 5px;
+    font-weight: bold;
+}
+.h-phone-2{
+    color: #9AD857;
+}
