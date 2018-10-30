@@ -3,10 +3,7 @@ package ru.reso.medchat.service;
 import ru.reso.medchat.model.ComparableValues;
 import ru.reso.resocalc.Entity.ComparedParam;
 import ru.reso.resocalc.Service.Factories.MainFactory;
-import ru.reso.resocalc.Utils.Factories.ConcreteFactories.BonusFactory;
-import ru.reso.resocalc.Utils.Factories.ConcreteFactories.CommonLogsFactory;
-import ru.reso.resocalc.Utils.Factories.ConcreteFactories.DriverFactory;
-import ru.reso.resocalc.Utils.Factories.ConcreteFactories.PartnerFactory;
+import ru.reso.resocalc.Utils.Factories.ConcreteFactories.*;
 import ru.reso.resocalc.Utils.Factories.EntitiesUtils;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -271,14 +268,98 @@ public class ResoComparator {
 
     }
 
+    public LinkedHashMap<String, ComparableValues> wsCalcLogsNewCompare(Integer calcIdFirst, Integer calcIdSecond, Integer onlyDif) {
+
+        LinkedHashMap<String, ComparableValues> result = new LinkedHashMap<String, ComparableValues>();
+        EntitiesUtils factory;
+
+        if (checkCoefs(calcIdFirst, calcIdSecond) == 2) {
+            Integer tempCalcId = calcIdFirst;
+            calcIdFirst = calcIdSecond;
+            calcIdSecond = tempCalcId;
+        }
+
+
+        factory = new WsCalcLogFactory();
+        LinkedHashMap<String, ComparedParam> hash = getResult(factory, calcIdFirst, calcIdSecond);
+
+        if (hash!=null) {
+            for (String name : hash.keySet()) {
+                if (onlyDif == 2) {
+                    if (!(hash.get(name)).getCompare()) {
+                        ComparableValues comparableValues = new ComparableValues((hash).get(name));
+
+                        if (!(getDescriptionForWsCoeffCalc(name)==null)) {
+                            name = getDescriptionForWsCoeffCalc(name);
+                        }
+                        result.put(name, comparableValues);
+                    }
+                } else {
+                    ComparableValues comparableValues = new ComparableValues((hash).get(name));
+
+                    if (!(getDescriptionForWsCoeffCalc(name)==null)) {
+                        name = getDescriptionForWsCoeffCalc(name);
+                    }
+
+                    result.put(name, comparableValues);
+                }
+            }
+        }
+
+        return result;
+    }
+
+    public LinkedHashMap<String, ComparableValues> coeffCompare2(Integer calcIdFirst, Integer calcIdSecond, Integer onlyDif) {
+
+        LinkedHashMap<String, ComparableValues> result = new LinkedHashMap<String, ComparableValues>();
+        EntitiesUtils factory;
+
+        if (checkCoefs(calcIdFirst, calcIdSecond) == 2) {
+            Integer tempCalcId = calcIdFirst;
+            calcIdFirst = calcIdSecond;
+            calcIdSecond = tempCalcId;
+        }
+
+
+        factory = new WsCoeffCalcFactory2();
+        LinkedHashMap<String, ComparedParam> hash = getResult(factory, calcIdFirst, calcIdSecond);
+
+        if (hash!=null) {
+            for (String name : hash.keySet()) {
+                if (onlyDif == 2) {
+                    if (!(hash.get(name)).getCompare()) {
+                        ComparableValues comparableValues = new ComparableValues((hash).get(name));
+
+                        if (!(getDescriptionForCoeff(name)==null)) {
+                               name = getDescriptionForCoeff(name);
+                         }
+
+                        result.put(name, comparableValues);
+                    }
+                } else {
+                    ComparableValues comparableValues = new ComparableValues((hash).get(name));
+
+                      if (!(getDescriptionForCoeff(name)==null)) {
+                         name = getDescriptionForCoeff(name);
+                      }
+
+                    result.put(name, comparableValues);
+                }
+            }
+        }
+
+        return result;
+    }
+
+
     private String getDescriptionForCoeff(String name){
         String description="";
 
 
         if ((name != null) || (name != "")) {
-          //  System.out.println("Мы в Ифе изменения дискрипшена");
+
             description = getDescriptionByCoefID(Integer.parseInt(name));
-         //   System.out.println("Дискрипшен достали - " + description);
+
         }
 
 

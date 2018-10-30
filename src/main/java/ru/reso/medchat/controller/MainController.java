@@ -93,8 +93,11 @@ public class MainController {
                 model.addAttribute("calcid2", calcID.getCalcId());
             }
 
-            LinkedHashMap<String, ComparableValues> fullCompareResult = resoComparator.fullCompare(calcID.getCalcId(), calcID.getCalcIdSecond());
-            LinkedHashMap<String, ComparableValues> fullCoefsCompareResult = resoComparator.coeffCompare(calcID.getCalcId(), calcID.getCalcIdSecond(),1);
+            //LinkedHashMap<String, ComparableValues> fullCompareResult = resoComparator.fullCompare(calcID.getCalcId(), calcID.getCalcIdSecond());
+            LinkedHashMap<String, ComparableValues> fullCompareResult = resoComparator.wsCalcLogsNewCompare(calcID.getCalcId(), calcID.getCalcIdSecond(), 1);
+            //LinkedHashMap<String, ComparableValues> fullCoefsCompareResult = resoComparator.coeffCompare(calcID.getCalcId(), calcID.getCalcIdSecond(),1);
+            LinkedHashMap<String, ComparableValues> fullCoefsCompareResult = resoComparator.coeffCompare2(calcID.getCalcId(), calcID.getCalcIdSecond(),1);
+
 
             if (fullCoefsCompareResult.isEmpty()) {
                 System.out.println("fullCoefsCompareResult is NULL");
