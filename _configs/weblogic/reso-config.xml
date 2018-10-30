@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <application>
+    
+    <!-- WORK MODE -->
+    
+    <app-workmode value="PRODUCTION" />
+    <!-- <app-workmode value="TEST" /> -->
+    
+    <!-- PRIMARY DATABASE -->
+    
+    <!-- <app-primary-db-name value="RESO-M" /> -->
+    <!--<app-primary-db-name value="ACTUARY" /> -->
+	<app-primary-db-name value="OSAGO" />
+    <!-- <app-primary-db-name value="RESOLIFE" /> -->    
+  </application>
+  
+  <!-- Database connections -->
+  <database-list>
+    <database code = "RESOM" name = "RESO-M" driver = "oracle.jdbc.OracleDriver" url = "jdbc:oracle:thin:@resocluster.reso.ru:1521:reso" access = "true" description = "Production database" >
+      <datasource-list>
+        <datasource code = "DS_WpResoRu_ResoM" name = "DS_WpResoRu_ResoM" access = "true" use_default = "true" />
+      </datasource-list>
+    </database>  
+
+<database code = "OSAGO" name = "OSAGO" driver = "oracle.jdbc.replay.OracleDataSourceImpl" url = "jdbc:oracle:thin:@oraserv2.reso.ru:1526:osago" access = "true" description = "Production database" >
+      <datasource-list>
+        <datasource code = "OSAGO" name = "OSAGO" access = "true" use_default = "true" />
+      </datasource-list>
+    </database>  
+
+	<database code = "ACTUARY" name = "ACTUARY" driver = "oracle.jdbc.OracleDriver" url = "jdbc:oracle:thin:@actuary.reso.ru:1521:actuary" access = "true" description = "Test database">
+      <datasource-list>
+        <datasource code = "DS_WpResoRu_Actuary" name = "DS_WpResoRu_Actuary" access = "true" />
+      </datasource-list>
+    </database>
+    <database code = "RESOLIFE" name = "RESOLIFE" driver = "oracle.jdbc.OracleDriver" url = "jdbc:oracle:thin:@resol.reso.ru:1521:resol" useraccess = "false" description = "">
+      <datasource-list>
+        <datasource code = "DS_WpResoRu_ResoLife" name = "DS_WpResoRu_ResoLife" access = "true" />
+      </datasource-list>
+    </database>
+    <database code = "INTRANET" name = "INTRANET" driver = "weblogic.jdbc.sqlserver.SQLServerDriver" useraccess = "false" description = "">
+      <datasource-list>
+        <datasource code = "DS_WpResoRu_Intranet" name = "DS_WpResoRu_Intranet" access = "true" />
+      </datasource-list>
+    </database>
+    <database code = "POSTGRES" name = "POSTGRES" driver = "org.postgresql.Driver" useraccess = "false" description = "Additional database for logging and settings">
+      <datasource-list>        
+        <datasource code = "DS_WpResoRu_Postgres" name = "DS_WpResoRu_Postgres" access = "true" use_default = "true" />      
+      </datasource-list>
+    </database>
+   
+    <database code = "MOBILE" name = "MOBILE" driver = "org.postgresql.Driver" useraccess = "false" description = "">
+      <datasource-list>        
+        <datasource code = "DS_WpResoRu_Mobile" name = "DS_WpResoRu_Mobile" access = "true" use_default = "true" />      
+      </datasource-list>
+    </database>    
+  </database-list>
+  
+  <!-- EMAIL'S -->
+  <mail></mail>
+  
+</root>
