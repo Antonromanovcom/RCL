@@ -1,3 +1,3 @@
 # RCL
 
-1.2 (version from kajam)1.1 (real working first REST hello world)
+1.3 (try to add reso-interact-functionality)

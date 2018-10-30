@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="reso-server-interact">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../Comparator/reso-server-interact/trunk/reso-server-interact/dist/reso-server-interact.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

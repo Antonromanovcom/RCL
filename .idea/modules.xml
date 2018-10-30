@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/wp-reso-ru.iml" filepath="$PROJECT_DIR$/wp-reso-ru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resoComparator.iml" filepath="$PROJECT_DIR$/resoComparator.iml" />
     </modules>
   </component>
 </project>

@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="wp-reso-ru:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="wp-reso-ru.war">
-      <element id="artifact" artifact-name="wp-reso-ru:war exploded" />
-    </root>
-  </artifact>
-</component>
