@@ -1,3 +1,3 @@
 # RCL
 
-1.6 (real working SPRING version with OSAGO reso-server-interact)
+1.7 (next step - we will add another Entities and DAO)

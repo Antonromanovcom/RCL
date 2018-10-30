@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 import static ru.reso.resocalc.Service.WsCalcLogDao.getLogByCalcID;
+import static ru.reso.resocalc.Service.WsCalcLogDao.testLogByCalcID;
 import static ru.reso.resocalc.Service.WsCalcLogDao.testPing;
 import static ru.reso.wp.srv.db.ResoDatabaseInvoke.decodeWebRowSet;
 
@@ -38,21 +39,34 @@ public class HelloMessage extends ResoRemoteObject {
         //String sql = "select t.agentid from webauto.ws_calc_logs_new@osago t where t.calcid = ?";
         //String sql = "select t.agentid from webauto.ws_calc_logs_new@osago t where t.calcid = ?";
         String sql = "select t.insurantid from  webauto.WS_CALC_LOGS_NEW t where t.calcid=?";
+        //String sql = " select * from WS_CALC_LOGS_NEW t  where t.calcid = ?";
         return testPing(sql);
     }
+
+    public WsCalcLogsNew getLog() {
+        return getLogByCalcID(122865181);
+    }
+
+    public String testLog() {
+        return testLogByCalcID(122865181);
+    }
+
+
+
 
     public String Test() {
 
         String test = "";
+        String res = "";
         StmtParamList paramList = new StmtParamList();
         paramList.add(new StmtParam(Types.INTEGER, 122865181));
       //  String sql1 = "select pu.name from adm.partner_users pu where pu.ID = ?";
        // String sql2 = "select t.agentid from webauto.ws_calc_logs t where t.calcid = ?"; // ACTUARY
-        String sql3 = "select t.insurantid from webauto.ws_calc_logs_new t where t.calcid = ?"; // OSAGO
+            String sql3 = "select * from webauto.ws_calc_logs_new t where t.calcid = ?"; // OSAGO
 
-        try {
+     /*   try {
 
-            String res = getResobj_EjbDatabaseInteraction().prepareStatementExecuteQuery(sql3, paramList);
+            res = getResobj_EjbDatabaseInteraction().prepareStatementExecuteQuery(sql3, paramList);
             ResultSet rs = decodeWebRowSet(res);
 
             if (rs.next()) {
@@ -66,10 +80,14 @@ public class HelloMessage extends ResoRemoteObject {
             e.printStackTrace();
         } catch (Exception ex) {
             System.out.println(ex.fillInStackTrace());
-        }
+        } */
 
-        //test = test + " - " + this.getCalcLog();
-        test = test + " - " + this.getCalcLog();
+        String fromLog = this.getLog().getCarbrandname();
+        //test = test + " - " + this.getCalcLog() + " - " + fromLog;
+        //test = test + " - " + this.testLog() + " : " + res;
+        //test = test + " - " + this.testLog();
+        //test = test  + " : " + res;
+        test = "WsCalcLogsNew - " + fromLog;
 
         return test;
 
