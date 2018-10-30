@@ -1,3 +1,3 @@
 # RCL
 
-1.4 (real working SPRING version (not SPRING BOOT) with reso-server-interact)
+1.5 (real working SPRING version with reso-server-interact. First Simple SELECT from Base is working)

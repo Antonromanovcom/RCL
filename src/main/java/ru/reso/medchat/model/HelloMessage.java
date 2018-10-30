@@ -6,7 +6,10 @@
 package ru.reso.medchat.model;
 
 import ru.reso.wp.srv.ResoRemoteObject;
+import ru.reso.wp.srv.db.models.StmtParam;
 import ru.reso.wp.srv.db.models.StmtParamList;
+
+import java.sql.Types;
 
 /**
  *
@@ -25,10 +28,18 @@ public class HelloMessage extends ResoRemoteObject {
 
         String test = "";
 
+        StmtParamList paramList = new StmtParamList();
+        paramList.add(new StmtParam(Types.INTEGER, 13469));
+
         try {
             //String res = this.getResobj_EjbDatabaseInteraction().prepareStatementExecuteQuery("select 1 from dual", new StmtParamList());
-            String res = "test";
+            String res = getResobj_EjbDatabaseInteraction().prepareStatementExecuteQuery("select pu.name from adm.partner_users pu where pu.ID = ?", paramList);
+            //getResobj_EjbDatabaseInteraction().Testt();
+            //String res = "test";
             System.out.println("res = " + res);
+
+            //rs = ResoDBUtils.decodeWebRowSet(resStr);
+
             // String res = "111";
 //            content = res;
 
@@ -40,7 +51,7 @@ public class HelloMessage extends ResoRemoteObject {
 
 
         } catch (Exception ex) {
-            System.out.println("PIZDEC");
+            System.out.println("PIZDEC:" + ex.fillInStackTrace());
         }
 
 
