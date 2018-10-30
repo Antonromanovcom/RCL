@@ -13,8 +13,8 @@ import ru.reso.wp.srv.db.models.StmtParamList;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
-import static ru.reso.resocalc.Service.WsCalcLogDao.getLogByCalcID;
-import static ru.reso.resocalc.Service.WsCalcLogDao.paramListGenerator;
+
+import static ru.reso.resocalc.Service.WsCalcLogDao.*;
 import static ru.reso.wp.srv.db.ResoDatabaseInvoke.decodeWebRowSet;
 
 /**
@@ -48,6 +48,12 @@ public class HelloMessage extends ResoRemoteObject {
         return getLogByCalcID(calc);
     }
 
+    public void testAdd() {
+
+        addLog(getMockObject(1));
+
+    }
+
     public String parseWS(WsCalcLogsNew ws) {
         Long calc =  122865290L;
         return String.valueOf(paramListGenerator(ws, calc));
@@ -57,14 +63,11 @@ public class HelloMessage extends ResoRemoteObject {
         return testLogByCalcID(122865181);
     } */
 
-
-
-
     public String Test() {
 
         String test = "";
         String res = "";
-        StmtParamList paramList = new StmtParamList();
+        StmtParamList paramList = new StmtParamList ();
         paramList.add(new StmtParam(Types.INTEGER, 122865181));
       //  String sql1 = "select pu.name from adm.partner_users pu where pu.ID = ?";
        // String sql2 = "select t.agentid from webauto.ws_calc_logs t where t.calcid = ?"; // ACTUARY
@@ -90,6 +93,7 @@ public class HelloMessage extends ResoRemoteObject {
 
         String fromLog = this.getLog().getCarbrandname();
         String parse = this.parseWS(this.getLog());
+        this.testAdd();
 
 
         //test = test + " - " + this.getCalcLog() + " - " + fromLog;
