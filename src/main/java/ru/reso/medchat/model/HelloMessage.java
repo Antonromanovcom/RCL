@@ -6,6 +6,7 @@
 package ru.reso.medchat.model;
 
 import ru.reso.resocalc.Entity.WsCalcLogsNew;
+import ru.reso.resocalc.Service.Factories.ConcreteFactories.WsCoeffCalcFactory;
 import ru.reso.resocalc.Service.WsCalcLogDao;
 import ru.reso.wp.srv.ResoRemoteObject;
 import ru.reso.wp.srv.db.models.StmtParam;
@@ -44,7 +45,6 @@ public class HelloMessage extends ResoRemoteObject {
 
     public WsCalcLogsNew getLog() {
         Long calc =  122865290L;
-        //paramListGenerator();
         return getLogByCalcID(calc);
     }
 
@@ -67,9 +67,32 @@ public class HelloMessage extends ResoRemoteObject {
         return String.valueOf(paramListGenerator(ws, calc));
     }
 
-    /*public String testLog() {
-        return testLogByCalcID(122865181);
-    } */
+    public String getSQL() {
+
+        //WsCalcLogDao w = new WsCalcLogDao();
+
+        String sql = "1";
+        //sql = getInsertSQL();
+        sql = getUpdateSQL();
+
+        return sql;
+    }
+
+    public String testLog() {
+        WsCoeffCalcFactory ws= new WsCoeffCalcFactory();
+
+        //String res = ws.webRowSet2Entity().getTest();
+
+        String res = ws.getEntityByCalcId(122865423).getTest();
+
+        return res;
+    }
+
+    public void testUpd() {
+      updateLogAutomative(getMockObjectForUpdateTest());
+    }
+
+
 
     public String Test() {
 
@@ -99,20 +122,25 @@ public class HelloMessage extends ResoRemoteObject {
             System.out.println(ex.fillInStackTrace());
         } */
 
-        //String fromLog = this.getLog().getCarbrandname();
+      //  String fromLog = this.getLog().getCarbrandname();
         String parse = this.parseWS(this.getLog());
+
         //String anyId = String.valueOf(this.getAnyId());
-        //this.testAdd();
-        this.testAdd2();
+//        this.testAdd();
+        //this.testAdd2();
+        this.testUpd();
+        String i = this.getSQL();
 
 
+        test = this.testLog();
         //test = test + " - " + this.getCalcLog() + " - " + fromLog;
         //test = test + " - " + this.testLog() + " : " + res;
         //test = test + " - " + this.testLog();
         //test = test  + " : " + res;
-        //test = "WsCalcLogsNew - " + fromLog;
+       // test = "WsCalcLogsNew - " + fromLog;
+        // test = "WsCalcLogsNew - " + parse;
         //test = "WsCalcLogsNew";
-        test = "WsCalcLogsNew - " + parse;
+     //   test = "WsCalcLogsNew - " + i;
         //test = "WsCalcLogsNew - " + anyId;
 
 

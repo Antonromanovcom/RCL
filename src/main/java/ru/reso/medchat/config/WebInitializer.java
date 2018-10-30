@@ -9,14 +9,15 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;  
   
 public class WebInitializer implements WebApplicationInitializer {
+    //public class WebInitializer {
     
     @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {        
+    public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();  
         ctx.register(appWebConfig.class);  
         ctx.setServletContext(servletContext);    
         Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));  
-        servlet.addMapping("/");  
+        servlet.addMapping("/");
         servlet.setLoadOnStartup(1);
     }
     

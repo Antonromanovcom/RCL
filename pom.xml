@@ -71,11 +71,7 @@
             <version>${javax.servlet.version}</version>  
             <scope>provided</scope>  
         </dependency> 
-        <dependency>
-            <groupId>org.kurento</groupId>
-            <artifactId>kurento-client</artifactId>
-            <version>6.6.2</version>
-        </dependency>
+
         <dependency>
             <groupId>ru.reso.wp</groupId>
             <artifactId>reso-server-interact</artifactId>
@@ -86,6 +82,11 @@
             <groupId>ru.reso.calclog</groupId>
             <artifactId>ResoCalcLog</artifactId>
             <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
         </dependency>
 
 

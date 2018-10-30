@@ -5,7 +5,7 @@
  */
 package ru.reso.medchat.config;
 
-import org.kurento.client.KurentoClient;
+//import org.kurento.client.KurentoClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,20 +19,24 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @Configuration
 @ComponentScan("ru.reso.medchat")
 @EnableWebMvc
-//Import({WebSocketConfig.class})
+
 public class appWebConfig extends WebMvcConfigurerAdapter {
+
   
     @Bean
     public UrlBasedViewResolver setupViewResolver() {
         UrlBasedViewResolver resolver = new UrlBasedViewResolver();
-        resolver.setPrefix("/jsp/");
+        resolver.setPrefix("/WEB-INF/jsp/");
         resolver.setSuffix(".jsp");
+        //resolver.setSuffix(".jpg");
         resolver.setViewClass(JstlView.class);
         return resolver;
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**").addResourceLocations("/js/");
+        //registry.addResourceHandler("/resources/**").addResourceLocations("/js/");
+        //registry.addResourceHandler("/resources/**");
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
     }
 }
