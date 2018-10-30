@@ -1,2 +1,3 @@
 # RCL
-Reso Calc Log Compare
+
+This is RESO calculation logs comparator...
