@@ -49,9 +49,17 @@ public class HelloMessage extends ResoRemoteObject {
     }
 
     public void testAdd() {
-
         addLog(getMockObject(1));
+    }
 
+    public void testAdd2() {
+        addLogAutomative(getMockObject(1));
+    }
+
+    public Long getAnyId() {
+        Long anyId = null;
+        anyId = getTestCalcId();
+        return anyId;
     }
 
     public String parseWS(WsCalcLogsNew ws) {
@@ -91,9 +99,11 @@ public class HelloMessage extends ResoRemoteObject {
             System.out.println(ex.fillInStackTrace());
         } */
 
-        String fromLog = this.getLog().getCarbrandname();
+        //String fromLog = this.getLog().getCarbrandname();
         String parse = this.parseWS(this.getLog());
-        this.testAdd();
+        //String anyId = String.valueOf(this.getAnyId());
+        //this.testAdd();
+        this.testAdd2();
 
 
         //test = test + " - " + this.getCalcLog() + " - " + fromLog;
@@ -101,7 +111,9 @@ public class HelloMessage extends ResoRemoteObject {
         //test = test + " - " + this.testLog();
         //test = test  + " : " + res;
         //test = "WsCalcLogsNew - " + fromLog;
+        //test = "WsCalcLogsNew";
         test = "WsCalcLogsNew - " + parse;
+        //test = "WsCalcLogsNew - " + anyId;
 
 
         return test;
