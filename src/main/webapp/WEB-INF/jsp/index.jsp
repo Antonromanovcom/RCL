@@ -26,7 +26,7 @@
 </div>
 
 
-<form:form method="POST" action="/medchat-1.0-SNAPSHOT/he" class="contact_form" modelAttribute="CalcId">
+<form:form method="POST" action="${pageContext.request.contextPath}/he" class="contact_form" modelAttribute="CalcId">
 
 
     <table style="width: 100%">
