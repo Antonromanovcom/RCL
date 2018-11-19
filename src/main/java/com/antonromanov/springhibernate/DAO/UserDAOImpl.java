@@ -1,9 +1,7 @@
 package com.antonromanov.springhibernate.DAO;
 
 import com.antonromanov.springhibernate.model.User;
-
 import javax.sql.DataSource;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,11 +29,6 @@ public class UserDAOImpl implements UserDAO {
             User customer = null;
             ResultSet rs = ps.executeQuery();
 
-          /*  if (rs.next()) {
-                customer = new User(rs.getString("name"));
-                result.add(customer);
-            }
-*/
             while (rs.next()) {
                 customer = new User(rs.getString("name"));
                 result.add(customer);
