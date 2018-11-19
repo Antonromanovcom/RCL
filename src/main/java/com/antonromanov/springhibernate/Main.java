@@ -9,7 +9,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/Spring-Module.xml");
 
         UserDAO personDAO = context.getBean(UserDAO.class);
         List<User> list = personDAO.getPersonList();

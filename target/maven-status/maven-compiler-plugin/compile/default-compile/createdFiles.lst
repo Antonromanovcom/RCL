@@ -1,0 +1,4 @@
+com\antonromanov\springhibernate\DAO\UserDAO.class
+com\antonromanov\springhibernate\DAO\UserDAOImpl.class
+com\antonromanov\springhibernate\model\User.class
+com\antonromanov\springhibernate\Main.class

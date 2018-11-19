@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDAOImpl implements UserDAO {
 
     private DataSource dataSource;
-    private static final String TEST_SQL = "select * from dual";
+    private static final String TEST_SQL = "SELECT ws.CARBRANDNAME FROM WS_CALC_LOGS_NEW ws Where   ROWNUM <= 10000";
 
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
