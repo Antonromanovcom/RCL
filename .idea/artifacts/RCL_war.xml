@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="RCL:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="RCL-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="RCL:war exploded" />
-    </root>
-  </artifact>
-</component>

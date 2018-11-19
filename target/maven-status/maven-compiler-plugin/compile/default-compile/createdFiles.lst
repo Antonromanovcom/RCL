@@ -1,8 +1,0 @@
-ru\reso\RCL\model\CoeffsAndValues.class
-ru\reso\RCL\config\WebInitializer.class
-ru\reso\RCL\config\appWebConfig.class
-ru\reso\RCL\controller\ResoRestController.class
-ru\reso\RCL\model\CalcID.class
-ru\reso\RCL\service\ResoComparator.class
-ru\reso\RCL\model\ComparableValues.class
-ru\reso\RCL\controller\MainController.class
