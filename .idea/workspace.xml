@@ -22,24 +22,17 @@
     <expand>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="mydataSource" type="e3449647:DbNodeDescriptor" />
+        <item name="jdbc:oracle:thin:@oraserv2.reso.ru:1526/osago" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="mydataSource" type="e3449647:DbNodeDescriptor" />
-        <item name="postgres" type="e3449647:DbNodeDescriptor" />
+        <item name="jdbc:oracle:thin:@oraserv2.reso.ru:1526/osago" type="e3449647:DbNodeDescriptor" />
+        <item name="WEBAUTO" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="mydataSource" type="e3449647:DbNodeDescriptor" />
-        <item name="postgres" type="e3449647:DbNodeDescriptor" />
-        <item name="public" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="mydataSource" type="e3449647:DbNodeDescriptor" />
-        <item name="postgres" type="e3449647:DbNodeDescriptor" />
-        <item name="public" type="e3449647:DbNodeDescriptor" />
+        <item name="jdbc:oracle:thin:@oraserv2.reso.ru:1526/osago" type="e3449647:DbNodeDescriptor" />
+        <item name="WEBAUTO" type="e3449647:DbNodeDescriptor" />
         <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
       </path>
     </expand>
@@ -47,12 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-              <folding />
+      <file leaf-file-name="WS_CALC_LOGS_NEW" pinned="false" current-in-tab="false">
+        <entry file="das://table:/61fa6718/875f53e9-90cd-4d57-aabb-8343a166ff45/WEBAUTO.WS_CALC_LOGS_NEW">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -60,14 +52,24 @@
       <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/DAO/UserDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="328">
+              <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#629#635#0" expanded="true" />
-                <marker date="1542626491438" expanded="true" signature="426:439" ph="select * fro... " />
-                <marker date="1542626491438" expanded="true" signature="426:444" ph="select ws.ca... ws_calc_logs_new" />
+                <marker date="1542630844098" expanded="true" signature="426:439" ph="select * fro... " />
+                <marker date="1542630844098" expanded="true" signature="426:444" ph="select * fro... dual" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/875f53e9-90cd-4d57-aabb-8343a166ff45/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,14 +98,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Spring-Datasource.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Datasource.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DaoTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/antonromanov/DaoTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="362">
+              <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spring-Customer.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Customer.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,13 +165,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Beans.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/Spring-Customer.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/Spring-Datasource.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/Spring-Module.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/DAO/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/model/User.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/antonromanov/DaoTests.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/Spring-Datasource.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/875f53e9-90cd-4d57-aabb-8343a166ff45/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/DAO/UserDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -317,12 +340,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FirstSPRINGJDBC(independent entities)" />
+    <property name="last_opened_file_path" value="C:/MY GIT/OracleJDBC" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="PostgreSQL" />
     <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -492,7 +516,7 @@
       <workItem from="1528210662781" duration="215000" />
       <workItem from="1542617900570" duration="1290000" />
       <workItem from="1542619443753" duration="120000" />
-      <workItem from="1542619602308" duration="4330000" />
+      <workItem from="1542619602308" duration="6020000" />
     </task>
     <servers />
   </component>
@@ -506,9 +530,21 @@
     <history-entry file="DaoTests - 2018.11.19 at 14h 39m 42s.xml">
       <configuration name="DaoTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DaoTests - 2018.11.19 at 15h 30m 54s.xml">
+      <configuration name="DaoTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DaoTests - 2018.11.19 at 15h 32m 13s.xml">
+      <configuration name="DaoTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DaoTests - 2018.11.19 at 15h 32m 58s.xml">
+      <configuration name="DaoTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DaoTests - 2018.11.19 at 15h 34m 06s.xml">
+      <configuration name="DaoTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13060000" />
+    <option name="totallyTimeSpent" value="14750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1432" y="-182" width="1936" height="1056" extended-state="6" />
@@ -523,10 +559,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10127932" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22444445" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3588889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1945629" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20895523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -541,7 +578,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -558,32 +594,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/DAO/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -591,8 +601,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#635#0" expanded="true" />
-            <marker date="1542626491438" expanded="true" signature="426:439" ph="select * fro... " />
-            <marker date="1542626491438" expanded="true" signature="426:444" ph="select ws.ca... ws_calc_logs_new" />
+            <marker date="1542630844098" expanded="true" signature="426:439" ph="select * fro... " />
+            <marker date="1542630844098" expanded="true" signature="426:444" ph="select * fro... dual" />
           </folding>
         </state>
       </provider>
@@ -650,8 +660,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#635#0" expanded="true" />
-            <marker date="1542626491438" expanded="true" signature="426:439" ph="select * fro... " />
-            <marker date="1542626491438" expanded="true" signature="426:444" ph="select ws.ca... ws_calc_logs_new" />
+            <marker date="1542630844098" expanded="true" signature="426:439" ph="select * fro... " />
+            <marker date="1542630844098" expanded="true" signature="426:444" ph="select * fro... dual" />
           </folding>
         </state>
       </provider>
@@ -711,8 +721,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#635#0" expanded="true" />
-            <marker date="1542626491438" expanded="true" signature="426:439" ph="select * fro... " />
-            <marker date="1542626491438" expanded="true" signature="426:444" ph="select ws.ca... ws_calc_logs_new" />
+            <marker date="1542630844098" expanded="true" signature="426:439" ph="select * fro... " />
+            <marker date="1542630844098" expanded="true" signature="426:444" ph="select * fro... dual" />
           </folding>
         </state>
       </provider>
@@ -768,8 +778,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#635#0" expanded="true" />
-            <marker date="1542626491438" expanded="true" signature="426:439" ph="select * fro... " />
-            <marker date="1542626491438" expanded="true" signature="426:444" ph="select ws.ca... ws_calc_logs_new" />
+            <marker date="1542630844098" expanded="true" signature="426:439" ph="select * fro... " />
+            <marker date="1542630844098" expanded="true" signature="426:444" ph="select * fro... dual" />
           </folding>
         </state>
       </provider>
@@ -837,8 +847,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#635#0" expanded="true" />
-            <marker date="1542626491438" expanded="true" signature="426:439" ph="select * fro... " />
-            <marker date="1542626491438" expanded="true" signature="426:444" ph="select ws.ca... ws_calc_logs_new" />
+            <marker date="1542630844098" expanded="true" signature="426:439" ph="select * fro... " />
+            <marker date="1542630844098" expanded="true" signature="426:444" ph="select * fro... dual" />
           </folding>
         </state>
       </provider>
@@ -888,8 +898,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#635#0" expanded="true" />
-            <marker date="1542626491438" expanded="true" signature="426:439" ph="select * fro... " />
-            <marker date="1542626491438" expanded="true" signature="426:444" ph="select ws.ca... ws_calc_logs_new" />
+            <marker date="1542630844098" expanded="true" signature="426:439" ph="select * fro... " />
+            <marker date="1542630844098" expanded="true" signature="426:444" ph="select * fro... dual" />
           </folding>
         </state>
       </provider>
@@ -929,22 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Datasource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Customer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Module.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -970,30 +964,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/61fa6718/875f53e9-90cd-4d57-aabb-8343a166ff45/WEBAUTO.WS_COEFF_CALC">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ROWID" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/61fa6718/875f53e9-90cd-4d57-aabb-8343a166ff45/WEBAUTO.WS_COMMON_LOGS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/61fa6718/875f53e9-90cd-4d57-aabb-8343a166ff45/WEBAUTO.WS_CALC_LOGS_NEW">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="method#User#0;class#User#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/antonromanov/DaoTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1008,15 +1016,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Customer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Datasource.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/antonromanov/DaoTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/875f53e9-90cd-4d57-aabb-8343a166ff45/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/antonromanov/springhibernate/DAO/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="328">
+          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#635#0" expanded="true" />
-            <marker date="1542626491438" expanded="true" signature="426:439" ph="select * fro... " />
-            <marker date="1542626491438" expanded="true" signature="426:444" ph="select ws.ca... ws_calc_logs_new" />
+            <marker date="1542630844098" expanded="true" signature="426:439" ph="select * fro... " />
+            <marker date="1542630844098" expanded="true" signature="426:444" ph="select * fro... dual" />
           </folding>
         </state>
       </provider>

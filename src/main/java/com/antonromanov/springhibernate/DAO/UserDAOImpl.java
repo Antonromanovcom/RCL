@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDAOImpl implements UserDAO {
 
     private DataSource dataSource;
-    private static final String TEST_SQL = "select * from test";
+    private static final String TEST_SQL = "select * from dual";
 
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
@@ -30,7 +30,7 @@ public class UserDAOImpl implements UserDAO {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                customer = new User(rs.getString("name"));
+                customer = new User(rs.getString(1));
                 result.add(customer);
             }
 

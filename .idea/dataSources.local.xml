@@ -9,5 +9,15 @@
       <user-name>postgres</user-name>
       <introspection-schemas>postgres:public</introspection-schemas>
     </data-source>
+    <data-source name="jdbc:oracle:thin:@oraserv2.reso.ru:1526/osago" uuid="875f53e9-90cd-4d57-aabb-8343a166ff45">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning option" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>webauto</user-name>
+      <introspection-schemas>*:WEBAUTO</introspection-schemas>
+    </data-source>
   </component>
 </project>
