@@ -1,8 +1,8 @@
 package com.antonromanov;
 
 
-import com.antonromanov.springhibernate.DAO.UserDAOImpl;
-import com.antonromanov.springhibernate.model.User;
+import com.antonromanov.springhibernate.DAO.PremiumDAOImpl;
+import com.antonromanov.springhibernate.model.Premium;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,17 +13,17 @@ import java.util.List;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/Spring-Module.xml")
+@ContextConfiguration("/applicationContext.xml")
 public class DaoTests {
 
     @Autowired
-    private UserDAOImpl personDao;
+    private PremiumDAOImpl premiumDAO;
 
     @Test
     public void testCrudOperations() {
 
         //loading all
-        List<User> testedList = personDao.getPersonList();
+        List<Premium> testedList = premiumDAO.getPremiumList();
         System.out.println("All loaded: " + testedList);
         Assert.assertTrue(testedList.size() > 0);
     }

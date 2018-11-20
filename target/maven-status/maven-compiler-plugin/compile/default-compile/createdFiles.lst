@@ -1,4 +1,6 @@
-com\antonromanov\springhibernate\DAO\UserDAO.class
-com\antonromanov\springhibernate\DAO\UserDAOImpl.class
-com\antonromanov\springhibernate\model\User.class
+com\antonromanov\springhibernate\DAO\PremiumDAO.class
+com\antonromanov\springhibernate\model\Premium.class
+com\antonromanov\springhibernate\service\PremiumServiceImpl.class
+com\antonromanov\springhibernate\DAO\PremiumDAOImpl.class
+com\antonromanov\springhibernate\service\PremiumService.class
 com\antonromanov\springhibernate\Main.class
