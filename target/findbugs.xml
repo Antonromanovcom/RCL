@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<BugCollection version='3.0.1' threshold='low' effort='max'><Error></Error><Project><SrcDir>D:\Anton\Coding\_SPRING\FirstSPRINGJDBC — копия\src\main\java</SrcDir><SrcDir>D:\Anton\Coding\_SPRING\FirstSPRINGJDBC — копия\target\generated-sources\annotations</SrcDir><SrcDir>D:\Anton\Coding\_SPRING\FirstSPRINGJDBC — копия\src\test\java</SrcDir></Project></BugCollection>

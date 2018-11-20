@@ -8,9 +8,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Entity.
+ */
 @Entity
 @SuppressWarnings("PMD")
-@Table(name="WS_DCT_PREMIUM")
+@Table(name = "WS_DCT_PREMIUM")
 public class Premium {
 
 
@@ -24,14 +27,23 @@ public class Premium {
     private Long id;
 
 
+    /**
+     * Name.
+     */
     @Getter
     @Setter
     private String name;
 
+    /**
+     * Descripotion.
+     */
     @Getter
     @Setter
     private String description;
 
+    /**
+     * Risk.
+     */
     @Getter
     @Setter
     private String risk;
@@ -39,7 +51,7 @@ public class Premium {
 
 
     @Override
-    public String toString() {
+    public final String toString() {
         return "Premium{" + "id=" + id + ", name='" + name + '\'' + '}';
     }
 

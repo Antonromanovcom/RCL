@@ -19,9 +19,15 @@ public class PremiumDAOImpl implements PremiumDAO {
     private SessionFactory sessionFactory;
 
 
-    @SuppressWarnings("unchecked")
-    public List<Premium> getPremiumList() {
-        return sessionFactory.openSession().createCriteria(Premium.class).list();
+    /**
+     * Get all entities.
+     *
+     * @return - list of all premiums
+     */
+    public final List<Premium> getPremiumList() {
+        return sessionFactory.openSession()
+                .createCriteria(Premium.class)
+                .list();
 
     }
 }

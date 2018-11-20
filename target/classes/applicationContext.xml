@@ -6,8 +6,31 @@
 
     <context:component-scan base-package="com.antonromanov.springhibernate"/>
 
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location">
+            <value>database.properties</value>
+        </property>
+    </bean>
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+
+        <property name="driverClass" value="${db.driverClassName}"/>
+        <property name="jdbcUrl" value="${db.url}"/>
+        <property name="user" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+
+    </bean>
+
+
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
         <property name="configLocation" value="hibernate.cfg.xml"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${db.dialect}</prop>
+                <prop key="hibernate.default_schema">${db.defaultschema}</prop>
+            </props>
+        </property>
     </bean>
 
 </beans>

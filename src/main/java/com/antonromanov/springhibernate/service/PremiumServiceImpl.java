@@ -7,9 +7,11 @@ import javax.inject.Inject;
 import java.util.Iterator;
 import java.util.List;
 
-
+/**
+ * Simple service implementation.
+ */
 @Service
-public class PremiumServiceImpl implements PremiumService{
+public class PremiumServiceImpl implements PremiumService {
 
     /**
      * Our data layer.
@@ -17,17 +19,24 @@ public class PremiumServiceImpl implements PremiumService{
     @Inject
     private PremiumDAO dao;
 
-    public void printAll() {
+    /**
+     * Print all entities.
+     */
+    public final void printAll() {
 
         List<Premium>  prm = dao.getPremiumList();
         Iterator<Premium> it = prm.iterator();
-        if (it.hasNext()) {
+
+        while (it.hasNext()) {
             System.out.println(it.next().toString());
         }
-
-
     }
 
+    /**
+     * Get one Entity.
+     *
+     * @return - string.
+     */
     public final String getOne() {
 
         List<Premium>  prm = dao.getPremiumList();
