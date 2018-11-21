@@ -21,6 +21,15 @@
 
     </bean>
 
+    <!-- <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+
+        <property name="jndiName" value="${db.jndiName}"/>
+        <property name="lookupOnStartup" value="false"/>
+        <property name="cache" value="true"/>
+        <property name="proxyInterface" value="javax.sql.DataSource"/>
+
+    </bean> -->
+
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />

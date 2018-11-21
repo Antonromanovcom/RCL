@@ -204,7 +204,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Find bugs -->
+  <!--          &lt;!&ndash; Find bugs &ndash;&gt;
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
@@ -224,8 +224,8 @@
                 </executions>
             </plugin>
 
-            <!-- Check for bad code -->
-            <plugin>
+            &lt;!&ndash; Check for bad code &ndash;&gt;
+         <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.4</version>
@@ -253,8 +253,8 @@
                 </executions>
             </plugin>
 
-            <!-- Check for bad code style-->
-            <plugin>
+            &lt;!&ndash; Check for bad code style&ndash;&gt;
+           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>2.15</version>
@@ -272,7 +272,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
 
 
         </plugins>
