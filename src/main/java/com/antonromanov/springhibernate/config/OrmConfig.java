@@ -1,19 +1,20 @@
 package com.antonromanov.springhibernate.config;
 
 import java.util.Properties;
+//import javax.naming.NamingException;
 import javax.sql.DataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+//import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * Spring's configuration for beans that are related to ORM and data access
- *
+ *  Spring's configuration for beans that are related to ORM and data access.
  * @author ROMAB
  */
 @Configuration
@@ -41,6 +42,10 @@ public class OrmConfig {
     private String hbm2dll;
 
 
+    /**
+     *  Привязываем датасорс.
+     * @return  Датасорс
+     */
     @Bean
     public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -51,6 +56,37 @@ public class OrmConfig {
         return dataSource;
     }
 
+
+
+    /**
+     *  Привязываем датасорс через JNDI.
+     * @return  Датасорс
+     * @throws NamingException
+     *
+     */
+
+  /*  @Bean
+    public DataSource dataSource() {
+        JndiObjectFactoryBean jndiObjectFactoryBean = new JndiObjectFactoryBean();
+        jndiObjectFactoryBean.setJndiName("OSAGO");
+        jndiObjectFactoryBean.setResourceRef(true);
+        jndiObjectFactoryBean.setProxyInterface(DataSource.class);
+        try {
+            jndiObjectFactoryBean.afterPropertiesSet();
+        } catch (NamingException e) {
+            e.printStackTrace();
+        }
+        return (DataSource) jndiObjectFactoryBean.getObject();  //NULL!!!
+    }*/
+
+
+
+    /**
+     *  Привязываем хибернейт и
+     *  проставляем ему свойства.
+     * @return  Свойства
+     *
+     */
     @Bean
     public Properties hibernateProperties() {
         final Properties properties = new Properties();
@@ -61,6 +97,12 @@ public class OrmConfig {
         return properties;
     }
 
+
+    /**
+     *  Сессионная фабрика.
+     * @return  собсна фабрика
+     *
+     */
     @Bean
     @SuppressWarnings("deprecation")
     public SessionFactory sessionFactory() {

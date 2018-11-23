@@ -204,7 +204,7 @@
                 </configuration>
             </plugin>
 
-  <!--          &lt;!&ndash; Find bugs &ndash;&gt;
+            <!-- Find bugs -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
@@ -224,7 +224,7 @@
                 </executions>
             </plugin>
 
-            &lt;!&ndash; Check for bad code &ndash;&gt;
+            <!-- Check for bad code -->
          <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -253,7 +253,7 @@
                 </executions>
             </plugin>
 
-            &lt;!&ndash; Check for bad code style&ndash;&gt;
+           <!-- &lt;!&ndash; Check for bad code style&ndash;&gt;
            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -266,6 +266,7 @@
                             <encoding>UTF-8</encoding>
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>
+                            <configLocation>src/main/resources/checkstyle.xml</configLocation>
                         </configuration>
                         <goals>
                             <goal>check</goal>

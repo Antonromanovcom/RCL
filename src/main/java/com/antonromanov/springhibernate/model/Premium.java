@@ -2,7 +2,6 @@ package com.antonromanov.springhibernate.model;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 
 /**

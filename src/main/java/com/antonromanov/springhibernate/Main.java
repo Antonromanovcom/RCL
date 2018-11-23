@@ -3,7 +3,6 @@ package com.antonromanov.springhibernate;
 import com.antonromanov.springhibernate.config.AppConfig;
 import com.antonromanov.springhibernate.service.PremiumService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.ApplicationContext;
 
 /**
@@ -24,7 +23,6 @@ public final class Main {
      */
     public static void main(final String[] args) {
 
-        //ApplicationContext context = new ClassPathXmlApplicationContext("/applicationContext.xml");
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         PremiumService greeterService = context.getBean(PremiumService.class);
         greeterService.printAll();

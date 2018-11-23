@@ -9,11 +9,21 @@ import org.springframework.context.annotation.Import;
 import org.springframework.core.io.ClassPathResource;
 
 
+/**
+ *   Класс, заменяющий applicationContext.xml
+ *   из папки resources.
+ */
+
 @Configuration
 @ComponentScan(basePackages = { "com.antonromanov.springhibernate" })
 @Import({ OrmConfig.class })
 public class AppConfig {
 
+
+/** Класс, который обеспечивает подпихивание
+* свойств из файла database.properties.
+* @return - Какой-то объект свойств
+*/
     @Bean
     public PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
         PropertyPlaceholderConfigurer ppc = new PropertyPlaceholderConfigurer();

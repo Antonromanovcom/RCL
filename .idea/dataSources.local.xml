@@ -19,5 +19,18 @@
       <user-name>webauto</user-name>
       <introspection-schemas>*:WEBAUTO</introspection-schemas>
     </data-source>
+    <data-source name="sessionFactory/Hibernate" uuid="736c84c5-e653-4763-9e96-bccbc96b10f5">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>webauto</user-name>
+    </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="4ca5de29-2417-401f-b24d-fb2f66c6d0de">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>webauto</user-name>
+    </data-source>
+    <data-source name="dataSource" uuid="0a44eaf1-8b17-4837-884e-b4dca7927b0b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>webauto</user-name>
+    </data-source>
   </component>
 </project>
