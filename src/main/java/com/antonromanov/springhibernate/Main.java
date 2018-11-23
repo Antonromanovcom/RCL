@@ -29,6 +29,8 @@ public final class Main {
         PremiumService greeterService = context.getBean(PremiumService.class);
         greeterService.printAll();
 
+        System.out.println(greeterService.getOne());
+
     }
 
 }

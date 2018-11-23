@@ -26,6 +26,7 @@ public class PremiumServiceImpl implements PremiumService {
 
         List<Premium>  prm = dao.getPremiumList();
         Iterator<Premium> it = prm.iterator();
+        System.out.println("Now we will print all values");
 
         while (it.hasNext()) {
             System.out.println(it.next().toString());

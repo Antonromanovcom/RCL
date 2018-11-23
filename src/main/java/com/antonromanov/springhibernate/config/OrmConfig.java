@@ -35,9 +35,10 @@ public class OrmConfig {
     private String hibernateDialect;
     @Value("${hibernate.show_sql}")
     private String hibernateShowSql;
-
     @Value("${db.defaultschema}")
     private String defaultSchema;
+    @Value("${hibernate.hbm2ddl.auto}")
+    private String hbm2dll;
 
 
     @Bean
@@ -56,6 +57,7 @@ public class OrmConfig {
         properties.put("hibernate.dialect", hibernateDialect);
         properties.put("hibernate.show_sql", hibernateShowSql);
         properties.put("hibernate.default_schema", defaultSchema);
+        properties.put("hibernate.hbm2ddl.auto", hbm2dll);
         return properties;
     }
 

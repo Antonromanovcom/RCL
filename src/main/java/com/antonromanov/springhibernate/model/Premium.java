@@ -3,17 +3,14 @@ package com.antonromanov.springhibernate.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Entity.
  */
 @Entity
 @SuppressWarnings("PMD")
-@Table(name = "WS_DCT_PREMIUM")
+@Table(name = "WS_PREM_TEST")
 public class Premium {
 
 
@@ -21,7 +18,9 @@ public class Premium {
      * Primary key.
      */
     @Id
-    @GeneratedValue
+    @Column(name="ID", nullable=false)
+    @SequenceGenerator(name="my_seq", sequenceName="WS_PREM_TEST_ID_SEQ")
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="my_seq")
     @Getter
     @Setter
     private Long id;
