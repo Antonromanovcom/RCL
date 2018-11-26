@@ -1,16 +1,20 @@
 package com.antonromanov.springhibernate.config;
 
 import java.util.Properties;
-//import javax.naming.NamingException;
 import javax.sql.DataSource;
+
+import com.antonromanov.springhibernate.DAO.PremiumDAO;
+import com.antonromanov.springhibernate.DAO.PremiumDAOImpl;
+import com.antonromanov.springhibernate.model.Premium;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-//import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
+import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -42,10 +46,8 @@ public class OrmConfig {
     private String hbm2dll;
 
 
-    /**
-     *  Привязываем датасорс.
-     * @return  Датасорс
-     */
+
+
     @Bean
     public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -58,35 +60,7 @@ public class OrmConfig {
 
 
 
-    /**
-     *  Привязываем датасорс через JNDI.
-     * @return  Датасорс
-     * @throws NamingException
-     *
-     */
 
-  /*  @Bean
-    public DataSource dataSource() {
-        JndiObjectFactoryBean jndiObjectFactoryBean = new JndiObjectFactoryBean();
-        jndiObjectFactoryBean.setJndiName("OSAGO");
-        jndiObjectFactoryBean.setResourceRef(true);
-        jndiObjectFactoryBean.setProxyInterface(DataSource.class);
-        try {
-            jndiObjectFactoryBean.afterPropertiesSet();
-        } catch (NamingException e) {
-            e.printStackTrace();
-        }
-        return (DataSource) jndiObjectFactoryBean.getObject();  //NULL!!!
-    }*/
-
-
-
-    /**
-     *  Привязываем хибернейт и
-     *  проставляем ему свойства.
-     * @return  Свойства
-     *
-     */
     @Bean
     public Properties hibernateProperties() {
         final Properties properties = new Properties();
@@ -98,19 +72,40 @@ public class OrmConfig {
     }
 
 
-    /**
-     *  Сессионная фабрика.
-     * @return  собсна фабрика
-     *
-     */
-    @Bean
+
+
+   /* @Bean
     @SuppressWarnings("deprecation")
     public SessionFactory sessionFactory() {
         return new LocalSessionFactoryBuilder(dataSource())
                 .scanPackages("com.antonromanov.springhibernate.model")
                 .addProperties(hibernateProperties())
                 .buildSessionFactory();
+    }*/
+
+
+    //@Autowired
+    @Bean(name = "sessionFactory")
+    public SessionFactory getSessionFactory(DataSource dataSource) {
+        LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
+        sessionBuilder.addProperties(hibernateProperties());
+        sessionBuilder.addAnnotatedClasses(Premium.class);
+        return sessionBuilder.buildSessionFactory();
     }
+
+   /* @Bean
+    public LocalSessionFactoryBean getSessionFactory() {
+        LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
+        factoryBean.setDataSource(dataSource());
+
+        factoryBean.setHibernateProperties(hibernateProperties());
+        factoryBean.setAnnotatedClasses(Premium.class);
+        return factoryBean;
+    }
+*/
+
+
+
 
     @Bean
     public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
@@ -119,5 +114,10 @@ public class OrmConfig {
         return htm;
     }
 
+   /* @Autowired
+    @Bean(name = "premiumDao")
+    public PremiumDAO getPremiumDao(SessionFactory sessionFactory) {
+        return new PremiumDAOImpl(sessionFactory);
+    }*/
 
 }

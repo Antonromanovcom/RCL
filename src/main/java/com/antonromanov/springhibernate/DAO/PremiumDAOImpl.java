@@ -1,6 +1,7 @@
 package com.antonromanov.springhibernate.DAO;
 
 import com.antonromanov.springhibernate.model.Premium;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.hibernate.SessionFactory;
 import javax.inject.Inject;
@@ -15,8 +16,16 @@ public class PremiumDAOImpl implements PremiumDAO {
     /**
      * JPA EM factory, provided by Spring.
      */
-    @Inject
+    @Autowired
     private SessionFactory sessionFactory;
+
+
+   /* public PremiumDAOImpl() {
+    }
+
+    public PremiumDAOImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }*/
 
 
     /**
