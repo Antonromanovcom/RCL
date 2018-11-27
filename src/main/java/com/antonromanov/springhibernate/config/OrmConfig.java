@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
+import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
@@ -48,7 +50,7 @@ public class OrmConfig {
 
 
 
-    @Bean
+   /* @Bean
     public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driverClassName);
@@ -56,7 +58,20 @@ public class OrmConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         return dataSource;
+    }*/
+
+    @Bean
+    public DataSource dataSource() {
+        //final DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        //JndiObjectFactoryBean jndiObjectFactoryBean =new JndiObjectFactoryBean();
+        final JndiDataSourceLookup dsLookup = new JndiDataSourceLookup();
+        dsLookup .setResourceRef(true);
+        //DataSource dataSource  = dsLookup.getDataSource("java:comp/env/jdbc/SpittrDS");
+        DataSource dataSource  = dsLookup.getDataSource("OSAGO");
+        return dataSource;
     }
+
+
 
 
 
