@@ -1,8 +1,7 @@
-com\antonromanov\springhibernate\DAO\PremiumDAO.class
-com\antonromanov\springhibernate\model\Premium.class
-com\antonromanov\springhibernate\config\SpringWebAppInitializer.class
-com\antonromanov\springhibernate\config\AppConfig.class
-com\antonromanov\springhibernate\controller\TestController.class
-com\antonromanov\springhibernate\DAO\PremiumDAOImpl.class
-com\antonromanov\springhibernate\config\OrmConfig.class
-com\antonromanov\springhibernate\Main.class
+ru\reso\calclogcompare\DAO\PremiumDAOImpl.class
+ru\reso\calclogcompare\model\Premium.class
+ru\reso\calclogcompare\DAO\PremiumDAO.class
+ru\reso\calclogcompare\config\SpringWebAppInitializer.class
+ru\reso\calclogcompare\config\AppConfig.class
+ru\reso\calclogcompare\controller\TestController.class
+ru\reso\calclogcompare\config\OrmConfig.class

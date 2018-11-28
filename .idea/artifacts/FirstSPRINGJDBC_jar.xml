@@ -2,7 +2,7 @@
   <artifact type="jar" name="FirstSPRINGJDBC:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/FirstSPRINGJDBC_jar</output-path>
     <root id="archive" name="FirstSPRINGJDBC.jar">
-      <element id="module-output" name="FirstSPRINGJDBC" />
+      <element id="module-output" name="Reso Calc Compare Tool" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.1.6.RELEASE/spring-jdbc-4.1.6.RELEASE.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-context/4.1.6.RELEASE/spring-context-4.1.6.RELEASE.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/jcl-over-slf4j/1.7.2/jcl-over-slf4j-1.7.2.jar" path-in-jar="/" />
