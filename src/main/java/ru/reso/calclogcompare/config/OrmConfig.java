@@ -2,14 +2,22 @@ package ru.reso.calclogcompare.config;
 
 import java.util.Properties;
 import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import ru.reso.calclogcompare.DAO.PremiumDAO;
 import ru.reso.calclogcompare.model.Premium;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
-import org.springframework.orm.hibernate4.HibernateTransactionManager;
-import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -19,7 +27,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
+@ComponentScan({ "ru.reso.calclogcompare" })
+@EnableJpaRepositories(basePackages = "ru.reso.calclogcompare.DAO")
 public class OrmConfig {
+
+
+    public OrmConfig() {
+        super();
+    }
 
 
     /**
@@ -67,6 +82,34 @@ public class OrmConfig {
         return dataSource;
     }
 
+
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+        final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
+        em.setDataSource(dataSource());
+        em.setPackagesToScan(new String[] { "ru.reso.calclogcompare.model" });
+
+        final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+        em.setJpaVendorAdapter(vendorAdapter);
+        em.setJpaProperties(hibernateProperties());
+
+        return em;
+    }
+
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        final JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
+        return transactionManager;
+    }
+
+    @Bean
+    public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
+        return new PersistenceExceptionTranslationPostProcessor();
+    }
+
+
+
     /**
      * Выставляем Hibernate свойства. Все по стандарту.
      *
@@ -88,7 +131,7 @@ public class OrmConfig {
      *
      * @param dataSource - датасорс наш.
      * @return - фабрика сессий.
-     */
+     *//*
     @Bean(name = "sessionFactory")
     public SessionFactory getSessionFactory(final DataSource dataSource) {
         LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
@@ -97,18 +140,19 @@ public class OrmConfig {
         return sessionBuilder.buildSessionFactory();
     }
 
-    /**
+    *//**
      * Транзакции для Хибернейта.
      *
      * @param sessionFactory - фабрика сессий Хибернейта
      * @return - HibernateTransactionManager.
-     */
+     *//*
     @Bean
     public HibernateTransactionManager transactionManager(final SessionFactory sessionFactory) {
         final HibernateTransactionManager htm =
                 new HibernateTransactionManager();
         htm.setSessionFactory(sessionFactory);
         return htm;
-    }
+    }*/
+
 
 }

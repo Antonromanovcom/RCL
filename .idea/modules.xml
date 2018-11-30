@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Reso Calc Compare Tool.iml" filepath="$PROJECT_DIR$/Reso Calc Compare Tool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RCCT.iml" filepath="$PROJECT_DIR$/RCCT.iml" />
     </modules>
   </component>
 </project>

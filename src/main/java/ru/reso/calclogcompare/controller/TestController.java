@@ -1,6 +1,7 @@
 package ru.reso.calclogcompare.controller;
 
 import ru.reso.calclogcompare.DAO.PremiumDAO;
+import ru.reso.calclogcompare.Service.PremiumService;
 import ru.reso.calclogcompare.model.Premium;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -18,11 +21,24 @@ import java.util.List;
 @Controller
 public class TestController {
 
+    @Autowired
+    PremiumService premiumService;
+
+
+    //PremiumDAO licenseRepository;
+
+    /*@Autowired
+    public void setUserService(PremiumService premiumService) {
+        this.premiumService = premiumService;
+    }*/
+
+
+
     /**
      * Инжектим ДАО
-     */
+     *//*
     @Autowired
-    private PremiumDAO mainDao;
+    private PremiumDAO mainDao;*/
 
     /**
      * Отрабатываем запрос /hi.
@@ -32,13 +48,26 @@ public class TestController {
      * @return the model and view
      * @throws Exception the exception
      */
-    @RequestMapping("/hi")
+   /* @RequestMapping("/hi")
     public ModelAndView handleRequest() throws Exception {
-        List<Premium> listUsers = mainDao.getPremiumList();
+        List<Premium> listUsers = licenseRepository.getPremiumList();
+        ModelAndView model = new ModelAndView("UserList");
+        model.addObject("userList", listUsers);
+        return model;
+    }*/
+
+
+    @RequestMapping("/ho")
+    public ModelAndView handleRequest2() throws Exception {
+        List<Premium> listUsers = new ArrayList<>() ;
+        listUsers.add(premiumService.getPremById(Long.valueOf(1)));
+        listUsers.add(premiumService.getPremById(Long.valueOf(2)));
+        listUsers.add(premiumService.getPremById(Long.valueOf(3)));
         ModelAndView model = new ModelAndView("UserList");
         model.addObject("userList", listUsers);
         return model;
     }
+
 
     /**
      * Просто пустая тестовая страничка.

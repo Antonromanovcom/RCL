@@ -1,5 +1,6 @@
-ru\reso\calclogcompare\DAO\PremiumDAOImpl.class
+ru\reso\calclogcompare\Service\PremiumService.class
 ru\reso\calclogcompare\model\Premium.class
+ru\reso\calclogcompare\Service\PremiumServiceImpl.class
 ru\reso\calclogcompare\DAO\PremiumDAO.class
 ru\reso\calclogcompare\config\SpringWebAppInitializer.class
 ru\reso\calclogcompare\config\AppConfig.class
