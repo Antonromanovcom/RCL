@@ -44,13 +44,21 @@ public class Premium {
     @Setter
     private String risk;
 
-    public Premium(String name) {
+    /**
+     * Конструктор для Премии.
+     *
+     * @param name - имя.
+     */
+    public Premium(final String name) {
         this.name = name;
         this.description = "description";
         this.risk = "risk";
 
     }
 
+    /**
+     * Дефолтный конструктор.
+     */
     public Premium() {
     }
 

@@ -1,6 +1,5 @@
 package ru.reso.calclogcompare.DAO;
 
-import org.springframework.data.repository.CrudRepository;
 import ru.reso.calclogcompare.model.Premium;
 import java.util.List;
 import org.springframework.stereotype.Repository;
@@ -15,28 +14,22 @@ import org.springframework.data.repository.query.Param;
 @Repository
 @Transactional
 public interface PremiumDAO extends JpaRepository<Premium, Long> {
-     /*
-      * Вывести все записи.
-      *
-      * @return список Премий.
-      */
-  //  List<Premium> getPremiumList();
-
 
     /**
-     * Вывести конкретную записи по ID.
-     * Версия через JPA.
+     * Выводим все записи с помощью @Query.
      *
-     * @return Премия.
+     * @return - Список имен
      */
-   /* @Query(value = "select s from WS_PREM_TEST s WHERE s.ID =:#{#param}")
-    Premium getPremiumByID(@Param("param") Integer param);*/
-
-
-
     @Query(value = "SELECT distinct s.name FROM Premium s")
     List<String> getAllSerials();
 
+
+    /**
+     * Выдаем одну конкретную
+     * запись по id.
+     *
+     * @return - конкретная премия.
+     */
     @Query(value = "select s from Premium s WHERE s.id = :myid")
     Premium getPremiumById(@Param("myid") Long param);
 

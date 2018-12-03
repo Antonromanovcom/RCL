@@ -4,36 +4,60 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.reso.calclogcompare.DAO.PremiumDAO;
 import ru.reso.calclogcompare.model.Premium;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
+/**
+ * Сервис, реализующий основной
+ * персистент функционал.
+ */
 @Service
 public class PremiumServiceImpl implements PremiumService {
 
-   @Autowired
-    private PremiumDAO DAORepository;
+    /**
+     * Основной ДАО репозиторий.
+     */
+    @Autowired
+    private PremiumDAO daoRepository;
 
-    public Premium getPremById(Long id) {
-        return DAORepository.findOne(id);
+    /**
+     * Выдать премию по id
+     * базовым методом findOne.
+     *
+     * @param id - id премии.
+     * @return - Премия.
+     */
+    public Premium getPremById(final Long id) {
+        return daoRepository.findOne(id);
     }
 
+    /**
+     * Выдать все премии
+     * через @Query.
+     *
+     * @return - список Премий.
+     */
     @Override
     public List<Premium> getAllInString() {
         List<Premium> result = new ArrayList<>();
 
 
-        for (String name : DAORepository.getAllSerials()) {
+        for (String name : daoRepository.getAllSerials()) {
             result.add(new Premium(name));
         }
 
         return result;
     }
 
+    /**
+     * Выдать премию по id
+     * через @Query.
+     *
+     * @return - Премия.
+     */
     @Override
-    public Premium getPremById2(Integer id) {
-        return DAORepository.getPremiumById(Long.valueOf(1));
+    public Premium getPremById2(final Integer id) {
+        return daoRepository.getPremiumById(Long.valueOf(1));
     }
 }

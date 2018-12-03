@@ -1,6 +1,5 @@
 package ru.reso.calclogcompare.controller;
 
-import ru.reso.calclogcompare.DAO.PremiumDAO;
 import ru.reso.calclogcompare.Service.PremiumService;
 import ru.reso.calclogcompare.model.Premium;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,50 +15,26 @@ import java.util.List;
 
 /**
  * Основной контроллер, который и выплевывает
- * данные на jsp
+ * данные на jsp.
  */
 @Controller
 public class TestController {
 
-    @Autowired
-    PremiumService premiumService;
-
-
-    //PremiumDAO licenseRepository;
-
-    /*@Autowired
-    public void setUserService(PremiumService premiumService) {
-        this.premiumService = premiumService;
-    }*/
-
-
-
     /**
-     * Инжектим ДАО
-     *//*
-    @Autowired
-    private PremiumDAO mainDao;*/
-
-    /**
-     * Отрабатываем запрос /hi.
-     * Сюда выплюнем список из тестовой
-     * таблицы БД.
-     *
-     * @return the model and view
-     * @throws Exception the exception
+     * Сервис, работающий с ДАО.
      */
-   /* @RequestMapping("/hi")
-    public ModelAndView handleRequest() throws Exception {
-        List<Premium> listUsers = licenseRepository.getPremiumList();
-        ModelAndView model = new ModelAndView("UserList");
-        model.addObject("userList", listUsers);
-        return model;
-    }*/
+    @Autowired
+    private PremiumService premiumService;
 
-
+    /**
+     * Не действующий в данном релизе метод.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
     @RequestMapping("/ho")
     public ModelAndView handleRequest2() throws Exception {
-        List<Premium> listUsers = new ArrayList<>() ;
+        List<Premium> listUsers = new ArrayList<>();
         listUsers.add(premiumService.getPremById(Long.valueOf(1)));
         listUsers.add(premiumService.getPremById(Long.valueOf(2)));
         listUsers.add(premiumService.getPremById(Long.valueOf(3)));
@@ -69,6 +44,12 @@ public class TestController {
     }
 
 
+    /**
+     * Выплевываем все записи через @Query.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
     @RequestMapping("/ha")
     public ModelAndView handleRequest3() throws Exception {
         List<Premium> listUsers = premiumService.getAllInString();
@@ -78,9 +59,16 @@ public class TestController {
     }
 
 
+    /**
+     * Выплевываем конкретную запись
+     * по id @Query.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
     @RequestMapping("/hu")
     public ModelAndView handleRequest4() throws Exception {
-        List<Premium> listUsers = new ArrayList<>() ;
+        List<Premium> listUsers = new ArrayList<>();
         listUsers.add(premiumService.getPremById2(1));
 
         ModelAndView model = new ModelAndView("UserList");
@@ -97,7 +85,7 @@ public class TestController {
      * @return the string
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(ModelMap map) {
+    public String index(final ModelMap map) {
         map.put("msg", "Hello Spring 4 Web MVC!");
         return "index";
     }
