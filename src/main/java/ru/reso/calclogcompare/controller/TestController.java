@@ -69,6 +69,27 @@ public class TestController {
     }
 
 
+    @RequestMapping("/ha")
+    public ModelAndView handleRequest3() throws Exception {
+        List<Premium> listUsers = premiumService.getAllInString();
+        ModelAndView model = new ModelAndView("UserList");
+        model.addObject("userList", listUsers);
+        return model;
+    }
+
+
+    @RequestMapping("/hu")
+    public ModelAndView handleRequest4() throws Exception {
+        List<Premium> listUsers = new ArrayList<>() ;
+        listUsers.add(premiumService.getPremById2(1));
+
+        ModelAndView model = new ModelAndView("UserList");
+        model.addObject("userList", listUsers);
+        return model;
+    }
+
+
+
     /**
      * Просто пустая тестовая страничка.
      *

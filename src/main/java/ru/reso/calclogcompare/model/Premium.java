@@ -44,6 +44,16 @@ public class Premium {
     @Setter
     private String risk;
 
+    public Premium(String name) {
+        this.name = name;
+        this.description = "description";
+        this.risk = "risk";
+
+    }
+
+    public Premium() {
+    }
+
     @Override
     public final String toString() {
         return "Premium{" + "id=" + id + ", name='" + name + '\'' + '}';
