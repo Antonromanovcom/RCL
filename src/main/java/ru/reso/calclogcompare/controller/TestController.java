@@ -1,5 +1,7 @@
 package ru.reso.calclogcompare.controller;
 
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import ru.reso.calclogcompare.Service.PremiumService;
 import ru.reso.calclogcompare.model.Premium;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,7 @@ import java.util.List;
  * данные на jsp.
  */
 @Controller
+@RequestMapping("/home")
 public class TestController {
 
     /**
@@ -83,11 +86,20 @@ public class TestController {
      *
      * @param map the map
      * @return the string
-     */
+     *//*
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(final ModelMap map) {
         map.put("msg", "Hello Spring 4 Web MVC!");
         return "index";
+    }*/
+
+
+    @GetMapping
+    public String home(Model model) throws Exception {
+        System.out.println("HOME");
+        return "forward:/index.html";
     }
+
+
 
 }

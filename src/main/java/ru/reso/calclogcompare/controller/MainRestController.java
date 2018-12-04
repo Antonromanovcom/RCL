@@ -3,7 +3,7 @@ package ru.reso.calclogcompare.controller;
 // This class created by Anton Romanov 03.12.2018 at 11:44
 // Git Hub repo - ...
 // https://192.*.*.*:33246/RCCT-2.0-SNAPSHOT/rest/getone?id=1
-// https://localhost:33246/RCCT-2.0-SNAPSHOT/rest/getone?id=1
+// http://localhost:8083/RCCT-2.0-SNAPSHOT/rest/check?id=1
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import ru.reso.calclogcompare.Service.PremiumService;
 import ru.reso.calclogcompare.model.Premium;
-
 import java.util.ArrayList;
 import java.util.List;
 

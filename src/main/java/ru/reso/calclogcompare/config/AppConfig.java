@@ -9,6 +9,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
@@ -23,7 +25,8 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @Import({OrmConfig.class})
 @EnableTransactionManagement
 @EnableWebMvc
-public class AppConfig {
+public class AppConfig extends WebMvcConfigurerAdapter {
+//public class AppConfig {
 
 
 
@@ -57,5 +60,15 @@ public class AppConfig {
         ppc.setIgnoreUnresolvablePlaceholders(true);
         return ppc;
     }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry){
+      //  registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/*.js/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/*.css/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/*.html/**").addResourceLocations("classpath:/static/");
+
+    }
+
 
 }
