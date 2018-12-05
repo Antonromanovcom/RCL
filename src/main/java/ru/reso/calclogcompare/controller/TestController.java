@@ -20,7 +20,7 @@ import java.util.List;
  * данные на jsp.
  */
 @Controller
-@RequestMapping("/home")
+//@RequestMapping("/home")
 public class TestController {
 
     /**
@@ -81,12 +81,12 @@ public class TestController {
 
 
 
-    /**
-     * Просто пустая тестовая страничка.
-     *
-     * @param map the map
-     * @return the string
-     *//*
+  /* *//**
+ * Просто пустая тестовая страничка.
+ *
+ * @param map the map
+ * @return the string
+ *//*
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(final ModelMap map) {
         map.put("msg", "Hello Spring 4 Web MVC!");
@@ -94,11 +94,11 @@ public class TestController {
     }*/
 
 
-    @GetMapping
+   /* @GetMapping
     public String home(Model model) throws Exception {
         System.out.println("HOME");
         return "forward:/index.html";
-    }
+    }*/
 
 
 

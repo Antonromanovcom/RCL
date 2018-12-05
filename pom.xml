@@ -346,6 +346,8 @@
 
             <!-- ANGULAR -->
 
+            <!-- Чистим папку ресурсов сервиса-->
+
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.0.0</version>
@@ -359,7 +361,7 @@
                         <configuration>
                             <filesets>
                                 <fileset>
-                                    <directory>${basedir}/src/main/resources/static</directory>
+                                    <directory>${build.directory}/classes/static/</directory>
                                 </fileset>
                             </filesets>
                         </configuration>
@@ -367,7 +369,53 @@
                 </executions>
             </plugin>
 
+            <!-- Билдим Angular-проект из Мавена -->
 
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <id>exec-npm-install</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <workingDirectory>${project.basedir}/firstng</workingDirectory>
+                            <executable>npm</executable>
+                            <!--	Change npm in C:\Program Files\nodejs to _npm -->
+                            <arguments>
+                                <argument>install</argument>
+                            </arguments>
+                        </configuration>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>exec-npm-ng-build</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <workingDirectory>${project.basedir}/firstng</workingDirectory>
+                            <executable>ng</executable>
+                            <!-- Change ng in C:\Users\Анатолий\AppData\Roaming\npm to _ng-->
+                            <arguments>
+                                <argument>build</argument>
+                                <argument>--base-href</argument>
+                                <argument>"/RCCT-2.0-SNAPSHOT/"</argument>
+                            </arguments>
+                        </configuration>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <!--${build.directory}/classes/static/-->
+            <!--${basedir}/src/main/resources/static-->
+
+       <!--Этот плагин копирует сбилженные дисты Ангуляра в папку ресурсов сервиса-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -381,7 +429,7 @@
                         </goals>
                         <configuration>
                             <overwrite>true</overwrite>
-                            <outputDirectory>${build.directory}/classes/static/</outputDirectory>
+                            <outputDirectory>${basedir}/target/classes/static/</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${basedir}/firstng/dist/firstng</directory>
