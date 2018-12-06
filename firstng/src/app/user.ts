@@ -1,4 +1,6 @@
-export class User{
+export class User {
+  id: number;
   name: string;
-  age: number;
+  description: string;
+  risk: string;
 }

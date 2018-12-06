@@ -11,11 +11,13 @@ import {User} from './user';
 export class AppComponent implements OnInit {
 
 user: User;
+url = 'http://localhost:8083/RCCT-2.0-SNAPSHOT/rest/check?id=1';
+   urlServer = 'https://192.168.0.14:33246/RCCT-2.0-SNAPSHOT/rest/check?id=1';
 
-  constructor(private httpService: CatPictureService) {}
+constructor(private httpService: CatPictureService) {}
 
   ngOnInit() {
-    this.httpService.getData('assets/data/user.json').subscribe((data: User) => this.user = data);
+    this.httpService.getData(this.url).subscribe((data: User) => this.user = data);
   }
 
 
