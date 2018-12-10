@@ -369,6 +369,29 @@
                 </executions>
             </plugin>
 
+            <!-- Чистим dist -->
+
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>auto-clean</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                        <configuration>
+                            <filesets>
+                                <fileset>
+                                    <directory>${project.basedir}/firstng/dist</directory>
+                                </fileset>
+                            </filesets>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- Билдим Angular-проект из Мавена -->
 
             <plugin>
@@ -432,7 +455,7 @@
                             <outputDirectory>${basedir}/target/classes/static/</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/firstng/dist/firstng</directory>
+                                    <directory>${basedir}/firstng/dist/</directory>
                                 </resource>
                             </resources>
                         </configuration>

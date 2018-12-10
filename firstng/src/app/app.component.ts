@@ -1,24 +1,20 @@
-import {Component, OnInit} from '@angular/core';
-import { CatPictureService} from './services/catPicture.service';
-import {User} from './user';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [CatPictureService]
+  // tslint:disable-next-line
+  selector: 'body',
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-
-user: User;
-url = 'http://localhost:8083/RCCT-2.0-SNAPSHOT/rest/check?id=1';
-   urlServer = 'https://192.168.0.14:33246/RCCT-2.0-SNAPSHOT/rest/check?id=1';
-
-constructor(private httpService: CatPictureService) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.httpService.getData(this.url).subscribe((data: User) => this.user = data);
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
+    });
   }
-
-
 }
