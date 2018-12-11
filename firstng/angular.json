@@ -28,10 +28,7 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["./node_modules"]
-            },
-            "scripts": [
-              "node_modules/chart.js/dist/Chart.min.js"
-            ]
+            }
           },
           "configurations": {
             "production": {

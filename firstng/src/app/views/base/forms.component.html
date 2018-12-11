@@ -10,7 +10,7 @@
             <div class="form-group row">
               <label class="col-md-3 col-form-label" for="hf-email">Email</label>
               <div class="col-md-9">
-                <input type="text" id="hf-email" name="hf-email" class="form-control" placeholder="Enter Email.." [(ngModel)]="user.name" required>
+                <input type="text" id="hf-email" name="hf-email" class="form-control" placeholder="Enter Email.." [(ngModel)]="req.calcID" required>
                 <div class="valid-feedback">
                   Input is valid.
                 </div>
@@ -48,13 +48,19 @@
                   </label>
                 </div>
               </div>
+
+              <div>
+                <p>Имя пользователя: {{receivedPrem?.name}}</p>
+                <p>Возраст пользователя: {{receivedPrem?.description}}</p>
+              </div>
+
             </div>
           </form>
         </div>
         <div class="card-footer">
           <div class="row align-items-center mt-3">
           <div class="col-md-6">
-            <button type="submit" class="btn btn-block btn-success" (click)="submit(user)"><i class="fa fa-dot-circle-o"></i> Submit</button>
+            <button type="submit" class="btn btn-block btn-success" (click)="change(req)"><i class="fa fa-dot-circle-o"></i> Submit</button>
           </div>
           <div class="col-md-6">
           <button type="reset" class="btn btn-block btn-danger"><i class="fa fa-ban"></i> Reset</button>

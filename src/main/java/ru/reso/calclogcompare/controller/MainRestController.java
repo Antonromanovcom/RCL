@@ -8,13 +8,12 @@ package ru.reso.calclogcompare.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import ru.reso.calclogcompare.Service.PremiumService;
 import ru.reso.calclogcompare.model.Premium;
+import ru.reso.calclogcompare.model.RequestFromClient;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +36,29 @@ public class MainRestController {
         return ResponseEntity.ok((premiumService.getPremById2(Integer.parseInt(id))));
 
     }
+
+
+
+    /**
+     * Клиент запрашивает данные по calcid.
+     * Клиент отсылает на сервер calcid.
+     * Ловим его тут.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
+    @PostMapping("/get")
+    public Premium getCompareResult(@RequestBody RequestFromClient newRequest) throws Exception {
+      //  List<Premium> listUsers = new ArrayList<>();
+      //  listUsers.add(premiumService.getPremById2(1));
+
+        System.out.println("POST captured " + newRequest.toString());
+
+    //    ModelAndView model = new ModelAndView("UserList");
+    //  model.addObject("userList", listUsers);
+        return premiumService.getPremById2(1);
+    }
+
 
 
 }

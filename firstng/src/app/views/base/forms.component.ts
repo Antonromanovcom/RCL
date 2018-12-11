@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {HttpService} from '../../services/http.service';
-import {User} from '../../user';
+import {Request} from '../../request';
+import {Premium} from '../../premium';
+
 
 @Component({
   selector: 'app-form-component',
@@ -11,33 +13,27 @@ export class FormsComponent {
 
   constructor(private httpService: HttpService) { }
 
-  isCollapsed: boolean = false;
-  iconCollapse: string = 'icon-arrow-up';
-  user: User = new User(); // данные вводимого пользователя
-  receivedUser: User; // полученный пользователь
+  req: Request = new Request(); // данные вводимого пользователя
+  receivedPrem: Premium; // полученная премия
   done: boolean = false;
 
 
-
-  collapsed(event: any): void {
-    // console.log(event);
+  @Output() onChanged = new EventEmitter<Request>();
+  change(req: Request) {
+    this.onChanged.emit(req);
   }
 
-  expanded(event: any): void {
-    // console.log(event);
-  }
 
-  toggleCollapse(): void {
-    this.isCollapsed = !this.isCollapsed;
-    this.iconCollapse = this.isCollapsed ? 'icon-arrow-down' : 'icon-arrow-up';
-  }
-
-  submit(user: User) {
-    this.httpService.postData(user)
+  submit(req: Request) {
+    this.httpService.postData(req)
       .subscribe(
-        (data: User) => {this.receivedUser = data; this.done = true; },
+        (data: Premium) => {this.receivedPrem = data; this.done = true; console.log(this.receivedPrem.name); },
         error => console.log(error)
       );
   }
+
+
+
+
 
 }

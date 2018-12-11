@@ -4,12 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 
-
-
-
 // Forms Component
 import { FormsComponent } from './forms.component';
-
 import { SwitchesComponent } from './switches.component';
 import { TablesComponent } from './tables.component';
 
@@ -37,7 +33,6 @@ import { ProgressComponent } from './progress.component';
 // Tooltip Component
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TooltipsComponent } from './tooltips.component';
-
 
 // Components Routing
 import { BaseRoutingModule } from './base-routing.module';

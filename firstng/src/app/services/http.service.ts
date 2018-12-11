@@ -1,16 +1,17 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {User} from '../user';
+import {Request} from '../request';
 
 
 @Injectable()
 export class HttpService {
 
-  constructor(private http: HttpClient){ }
+  constructor(private http: HttpClient) { }
 
-  postData(user: User) {
+  postData(req: Request) {
 
-    const body = {name: user.name, age: user.age};
-    return this.http.post('http://localhost:60820/api/values', body);
+    const body = {calcID: req.calcID, compareType: req.compareType};
+    console.log(req.calcID);
+    return this.http.post('http://localhost:8083/RCCT-2.0-SNAPSHOT/rest/get', body);
   }
 }
