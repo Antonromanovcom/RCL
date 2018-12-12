@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import ru.reso.calclogcompare.Service.PremiumService;
 import ru.reso.calclogcompare.model.Premium;
+import ru.reso.calclogcompare.model.PremiumList;
 import ru.reso.calclogcompare.model.RequestFromClient;
+import ru.reso.calclogcompare.model.Risk;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,14 +31,9 @@ public class MainRestController {
 
     @RequestMapping(value = "check", method = RequestMethod.GET)
     public ResponseEntity<?> CheckSerial(@RequestParam("id") String id) {
-
-   //     Response response = new Response();
-
         System.out.println("Пришел запрос");
         return ResponseEntity.ok((premiumService.getPremById2(Integer.parseInt(id))));
-
     }
-
 
 
     /**
@@ -49,14 +46,55 @@ public class MainRestController {
      */
     @PostMapping("/get")
     public Premium getCompareResult(@RequestBody RequestFromClient newRequest) throws Exception {
-      //  List<Premium> listUsers = new ArrayList<>();
-      //  listUsers.add(premiumService.getPremById2(1));
-
+        //  List<Premium> listUsers = new ArrayList<>();
+        //  listUsers.add(premiumService.getPremById2(1));
         System.out.println("POST captured " + newRequest.toString());
-
-    //    ModelAndView model = new ModelAndView("UserList");
-    //  model.addObject("userList", listUsers);
         return premiumService.getPremById2(1);
+    }
+
+
+    /**
+     * Клиент запрашивает данные по RISK.
+     * Выдаем список подходящих Премий.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
+    //PostMapping(value = "/getallbyrisk", consumes = "application/json", produces = "application/json")
+
+    //@RequestMapping(method = RequestMethod.GET, path = "/getallbyrisk")
+    //public PremiumList getAllByRisk(@RequestBody Risk risk) throws Exception {
+    //RequestMapping(value = "getallbyrisk", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, path = "/v2")
+    public PremiumList getAllByRisk() {
+        //List<Premium> premiumList = new ArrayList<>();
+        PremiumList premiumList = new PremiumList();
+        //premiumList.getPremiumList().addAll(premiumService.getPremByRisk("R001"));
+        premiumList.getPremiumList().add(premiumService.getPremById2(1));
+        //System.out.println("POST captured " + risk.toString());
+        System.out.println("WE ARE HERE !!!!");
+        return premiumList;
+        // return premiumService.getPremByRisk("R001");
+    }
+
+
+
+
+    /**
+     * Клиент запрашивает данные по RISK.
+     * Выдаем список подходящих Премий.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/v3")
+    public PremiumList getAllByRisk2(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2) {
+
+        PremiumList premiumList = new PremiumList();
+        premiumList.getPremiumList().add(premiumService.getPremById2(1));
+        System.out.println("Params: " + String.valueOf(id1) + " - " + String.valueOf(id2));
+        return premiumList;
+
     }
 
 

@@ -18,7 +18,7 @@
         </tab>
         <tab>
           <ng-template tabHeading><i class="icon-pie-chart"></i> Charts</ng-template>
-          Вкладка №3
+          <div *ngFor="let f of entity"> {{ f.name | uppercase }}</div>
         </tab>
       </tabset>
     </div><!--/.col-->

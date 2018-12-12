@@ -34,4 +34,5 @@ public interface PremiumService {
      */
     Premium getPremById2(Integer id);
 
+    List<Premium> getPremByRisk(String risk);
 }

@@ -34,4 +34,15 @@ public interface PremiumDAO extends JpaRepository<Premium, Long> {
     Premium getPremiumById(@Param("myid") Long param);
 
 
+    /**
+     * Выдаем премии по
+     * риску.
+     *
+     * @return - конкретная премия.
+     */
+    @Query(value = "select s from Premium s WHERE s.risk = :myrisk")
+    List<Premium> getPremiumListByRisk(@Param("myrisk") String param);
+
+
+
 }

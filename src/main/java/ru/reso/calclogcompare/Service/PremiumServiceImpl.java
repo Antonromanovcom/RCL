@@ -60,4 +60,15 @@ public class PremiumServiceImpl implements PremiumService {
     public Premium getPremById2(final Integer id) {
         return daoRepository.getPremiumById(Long.valueOf(1));
     }
+
+    /**
+     * Выдать премию по RISK
+     * через @Query.
+     *
+     * @return - список премий.
+     */
+    @Override
+    public List<Premium> getPremByRisk(String risk) {
+        return daoRepository.getPremiumListByRisk(risk);
+    }
 }
