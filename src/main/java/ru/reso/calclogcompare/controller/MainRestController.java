@@ -69,12 +69,12 @@ public class MainRestController {
     public PremiumList getAllByRisk() {
         //List<Premium> premiumList = new ArrayList<>();
         PremiumList premiumList = new PremiumList();
-        //premiumList.getPremiumList().addAll(premiumService.getPremByRisk("R001"));
-        premiumList.getPremiumList().add(premiumService.getPremById2(1));
-        //System.out.println("POST captured " + risk.toString());
+        premiumList.getPremiumList().addAll(premiumService.getPremByRisk("R001"));
+        //premiumList.getPremiumList().add(premiumService.getPremById2(1));
+
         System.out.println("WE ARE HERE !!!!");
         return premiumList;
-        // return premiumService.getPremByRisk("R001");
+
     }
 
 

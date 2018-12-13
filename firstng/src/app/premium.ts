@@ -4,4 +4,7 @@ export class Premium {
   description: string;
   risk: string;
 
+  constructor() {
+  }
+
 }
