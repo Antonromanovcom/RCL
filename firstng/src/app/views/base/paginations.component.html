@@ -10,10 +10,15 @@
     </div>
     <div class="card-body">
       <div class="row">
-        <div class="col-xs-12 col-12 d-sm-down-none">
-          <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+
+        <div class="content-wrapper">
+          <p class="content-item" *ngFor="let content of returnedArray">{{content}}</p>
         </div>
-        <div class="col-xs-12 col-12">
+
+        <div class="col-xs-12 col-12 d-sm-down-none">
+          <pagination [totalItems]="contentArray.length" [itemsPerPage]="5" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+        </div>
+        <!--<div class="col-xs-12 col-12">
           <pagination [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm" [maxSize]="6"
                       previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
         </div>
@@ -24,15 +29,15 @@
         <div class="col-xs-12 col-12">
           <pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage"
                       (numPages)="smallnumPages = $event"></pagination>
-        </div>
+        </div>-->
       </div>
       <pre class="card card-body card-header mb-3">The selected page no: {{currentPage}}/{{smallnumPages}}</pre>
     </div>
-    <div class="card-footer">
+    <!--<div class="card-footer">
       <button type="button" class="btn btn-info" (click)="setPage(3)">Set current page to: 3</button>
-    </div>
+    </div>-->
   </div>
-  <div class="card">
+  <!--<div class="card">
     <div class="card-header">
       Pagination <small>states & limits</small>
     </div>
@@ -51,8 +56,8 @@
       </div>
       <pre class="card card-body card-header">Page: {{bigCurrentPage}} / {{numPages}}</pre>
     </div>
-  </div>
-  <div class="card">
+  </div>-->
+  <!--<div class="card">
     <div class="card-header">
       Pager
     </div>
@@ -79,5 +84,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>

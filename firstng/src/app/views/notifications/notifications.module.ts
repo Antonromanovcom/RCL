@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 // Alert Component
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { AlertsComponent } from './alerts.component';
-
 import { BadgesComponent } from './badges.component';
 
 // Modal Component
@@ -24,7 +23,7 @@ import { NotificationsRoutingModule } from './notifications-routing.module';
   ],
   declarations: [
     AlertsComponent,
-    BadgesComponent,
+  //  BadgesComponent,
     ModalsComponent
   ]
 })

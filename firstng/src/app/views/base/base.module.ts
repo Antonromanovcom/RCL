@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+// Badges
+import { BadgesComponent } from '../notifications/badges.component';
+
 
 // Forms Component
 import { FormsComponent } from './forms.component';
@@ -55,6 +58,7 @@ import { BaseRoutingModule } from './base-routing.module';
     SwitchesComponent,
     TablesComponent,
     TabsComponent,
+    BadgesComponent,
     PaginationsComponent,
     ProgressComponent,
     TooltipsComponent

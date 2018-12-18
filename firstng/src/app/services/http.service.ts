@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Request} from '../request';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Response} from '@angular/http';
 import {Premium} from '../premium';
@@ -9,6 +9,8 @@ import {Premium} from '../premium';
 
 @Injectable()
 export class HttpService {
+
+  // private subject = new Subject<any>();
 
   constructor(private http: HttpClient) { }
 
@@ -18,19 +20,52 @@ export class HttpService {
     return this.http.post('http://localhost:8083/RCCT-2.0-SNAPSHOT/rest/get', body);
   }
 
-  public getData(url: string): Observable<any> {
+ /* sendMessage(premiums: Premium[]) {
+    this.subject.next({ text: premiums });
+  }
+
+  clearMessage() {
+    this.subject.next();
+  }
+
+  getMessage(): Observable<any> {
+    return this.subject.asObservable();
+  }*/
+ /* public getData(url: string): Observable<any> {
     return this.http.get(url);
   }
 
 
   public getData2(url: string) {
     return this.http.get(url);
-  }
+  }*/
 
   public getData4(url: string): Observable<Premium[]> {
     console.log('GET DATA......');
     console.log(url);
     return this.http.get<Premium[]>(url);
+  }
+
+
+  public getData5(url: string, req: Request): Observable<Premium[]> {
+    console.log('GET DATA WITH PARAMETRS  ......');
+    console.log(url);
+
+    let header = new HttpHeaders();
+    header.append('Content-Type', 'application/json');
+   // headers.append('projectid', this.id);
+   // let params = new URLSearchParams();
+ //   params.append('someParamKey', req.calcID.toString())
+    const myvar = new HttpParams().set('id1', req.calcID.toString()).set('id2', '7');
+
+   /* const options = {
+      headers: header,
+      "observe?": "response",
+      "responseType?": "json",
+    };*/
+
+
+    return this.http.get<Premium[]>(url, {params: myvar});
   }
 
 

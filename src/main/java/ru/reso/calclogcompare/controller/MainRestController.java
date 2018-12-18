@@ -91,7 +91,7 @@ public class MainRestController {
     public PremiumList getAllByRisk2(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2) {
 
         PremiumList premiumList = new PremiumList();
-        premiumList.getPremiumList().add(premiumService.getPremById2(1));
+        premiumList.getPremiumList().add(premiumService.getPremById2(id1));
         System.out.println("Params: " + String.valueOf(id1) + " - " + String.valueOf(id2));
         return premiumList;
 

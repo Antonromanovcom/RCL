@@ -58,7 +58,7 @@ public class PremiumServiceImpl implements PremiumService {
      */
     @Override
     public Premium getPremById2(final Integer id) {
-        return daoRepository.getPremiumById(Long.valueOf(1));
+        return daoRepository.getPremiumById(Long.valueOf(id));
     }
 
     /**

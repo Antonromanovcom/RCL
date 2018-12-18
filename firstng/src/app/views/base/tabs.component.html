@@ -15,10 +15,20 @@
             <p>Имя пользователя: {{receivedPrem?.name}}</p>
             <p>Возраст пользователя: {{receivedPrem?.description}}</p>
           </div>
+          <div>
+            <app-tables-component [childElements]="premiumsO"></app-tables-component>
+          </div>
+
         </tab>
         <tab>
           <ng-template tabHeading><i class="icon-pie-chart"></i> Charts</ng-template>
           <div *ngFor="let premium of premiumsO">ID: {{ premium.id }}</div>
+        </tab>
+        <tab>
+          <ng-template tabHeading><i class="icon-pie-chart"></i> Pagination</ng-template>
+          <div>
+          <app-badges-component></app-badges-component>
+          </div>
         </tab>
       </tabset>
     </div><!--/.col-->
