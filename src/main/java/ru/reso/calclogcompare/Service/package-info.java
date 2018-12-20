@@ -2,6 +2,6 @@
  * Reso Calc Log Compare Tool
  * Spring JDBC + Hiberante + Oracle DAO.
  *
- * Service package.
+ * service package.
  */
-package ru.reso.calclogcompare.Service;
+package ru.reso.calclogcompare.service;

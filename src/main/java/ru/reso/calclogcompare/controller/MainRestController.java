@@ -9,15 +9,10 @@ package ru.reso.calclogcompare.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-import ru.reso.calclogcompare.Service.PremiumService;
+import ru.reso.calclogcompare.service.PremiumService;
 import ru.reso.calclogcompare.model.Premium;
 import ru.reso.calclogcompare.model.PremiumList;
 import ru.reso.calclogcompare.model.RequestFromClient;
-import ru.reso.calclogcompare.model.Risk;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("/rest")
@@ -73,6 +68,9 @@ public class MainRestController {
         //premiumList.getPremiumList().add(premiumService.getPremById2(1));
 
         System.out.println("WE ARE HERE !!!!");
+
+        premiumService.test();
+
         return premiumList;
 
     }
@@ -89,6 +87,23 @@ public class MainRestController {
      */
     @RequestMapping(method = RequestMethod.GET, path = "/v3")
     public PremiumList getAllByRisk2(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2) {
+
+        PremiumList premiumList = new PremiumList();
+        premiumList.getPremiumList().add(premiumService.getPremById2(id1));
+        System.out.println("Params: " + String.valueOf(id1) + " - " + String.valueOf(id2));
+        return premiumList;
+
+    }
+
+    /**
+     * Первая попытка подключить боевую таблу.
+     * Сделаем на всякий пожарный копию боевой таблы и выдадим ее
+     *
+     * @return - табличку.
+     * @throws Exception - эксепшн.
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/v4")
+    public PremiumList getAllByRisk3(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2) {
 
         PremiumList premiumList = new PremiumList();
         premiumList.getPremiumList().add(premiumService.getPremById2(id1));

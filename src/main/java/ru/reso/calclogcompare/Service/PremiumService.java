@@ -1,6 +1,8 @@
-package ru.reso.calclogcompare.Service;
+package ru.reso.calclogcompare.service;
 
 import ru.reso.calclogcompare.model.Premium;
+import ru.reso.calclogcompare.model.WsCalcLogsNew;
+
 import java.util.List;
 
 
@@ -35,4 +37,6 @@ public interface PremiumService {
     Premium getPremById2(Integer id);
 
     List<Premium> getPremByRisk(String risk);
+
+    void test();
 }

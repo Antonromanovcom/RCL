@@ -1,14 +1,11 @@
 package ru.reso.calclogcompare.controller;
 
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.reso.calclogcompare.Service.PremiumService;
+import ru.reso.calclogcompare.service.PremiumService;
 import ru.reso.calclogcompare.model.Premium;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
-import ru.reso.calclogcompare.model.RequestFromClient;
 
 import java.util.ArrayList;
 import java.util.List;
