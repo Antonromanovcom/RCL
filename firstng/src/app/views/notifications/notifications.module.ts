@@ -22,9 +22,9 @@ import { NotificationsRoutingModule } from './notifications-routing.module';
     ModalModule.forRoot()
   ],
   declarations: [
-    AlertsComponent,
+    AlertsComponent
   //  BadgesComponent,
-    ModalsComponent
+   // ModalsComponent
   ]
 })
 export class NotificationsModule { }

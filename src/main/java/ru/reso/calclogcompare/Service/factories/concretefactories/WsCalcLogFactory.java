@@ -11,27 +11,22 @@ import java.util.LinkedHashMap;
 
 public class WsCalcLogFactory implements AbstractFactory {
 
-  //  @Autowired
-  //  private WsCalcLogsNewDAO wsCalcLogsNewDAO;
-
-   private  WsCalcLogsNew wsCalcLogsNew;
-
+     private  WsCalcLogsNew wsCalcLogsNew;
 
     public WsCalcLogFactory(WsCalcLogsNew wsCalcLogsNew) {
-
         this.wsCalcLogsNew = wsCalcLogsNew;
+    }
+
+
+    public WsCalcLogFactory() {
     }
 
     @Override
     public LinkedHashMap<String, String> getHash() {
 
         LinkedHashMap<String, String> result = new LinkedHashMap<>();
-        long startTime = System.currentTimeMillis(); //Стартовое время на операцию.
-
-        //wsCalcLogsNew = wsCalcLogsNewDAO.findOne(Long.valueOf(122866996));
-        //wsCalcLogsNew = premiumService.test();
         String className = getClassName(wsCalcLogsNew); //Вытаскиваем имя класса
-        System.out.println((System.currentTimeMillis() - startTime) + ": time exec"); // Время выполнения.
+
         try {
             Class<?> clazz = Class.forName(className); //Берем сам класс
             for (Field field : clazz.getDeclaredFields()) { //Бегаем по полям класса

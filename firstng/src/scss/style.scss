@@ -10,7 +10,34 @@
 
 
 .green{
-  color:green;
-  background-color:red;
+  background-color: #ff8f9d;
+}
 
+// --------- Успешное выполнение запроса -------------
+
+.my-modal {
+  border: solid 0px #000000;
+}
+
+.my-modal .modal-header {
+  background-color: #86ff5c;
+}
+
+.my-modal .modal-body {
+  background-color: #ebffcf;
+}
+
+// --------- Неуспешное выполнение запроса -------------
+
+
+.my-modal-fail {
+  border: solid 0px #000000;
+}
+
+.my-modal-fail .modal-header {
+  background-color: #ff516a;
+}
+
+.my-modal-fail .modal-body {
+  background-color: #f1dcd6;
 }

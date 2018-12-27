@@ -2,47 +2,24 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Request} from '../request';
 import {Observable, Subject} from 'rxjs';
-import {map} from 'rxjs/operators';
-import {Response} from '@angular/http';
 import {Premium} from '../premium';
 
 
 @Injectable()
 export class HttpService {
 
-  // private subject = new Subject<any>();
-
   constructor(private http: HttpClient) { }
 
   postData(req: Request) {
-    const body = {calcID: req.calcID, compareType: req.compareType};
-    console.log(req.calcID);
+    const body = {calcID: req.calcID1, compareType: req.compareType};
+    console.log(req.calcID1);
     return this.http.post('http://localhost:8083/RCCT-2.0-SNAPSHOT/rest/get', body);
   }
-
- /* sendMessage(premiums: Premium[]) {
-    this.subject.next({ text: premiums });
-  }
-
-  clearMessage() {
-    this.subject.next();
-  }
-
-  getMessage(): Observable<any> {
-    return this.subject.asObservable();
-  }*/
- /* public getData(url: string): Observable<any> {
-    return this.http.get(url);
-  }
-
-
-  public getData2(url: string) {
-    return this.http.get(url);
-  }*/
 
   public getData4(url: string): Observable<Premium[]> {
     console.log('GET DATA......');
     console.log(url);
+
     return this.http.get<Premium[]>(url);
   }
 
@@ -53,73 +30,15 @@ export class HttpService {
 
     let header = new HttpHeaders();
     header.append('Content-Type', 'application/json');
-   // headers.append('projectid', this.id);
-   // let params = new URLSearchParams();
- //   params.append('someParamKey', req.calcID.toString())
-    const myvar = new HttpParams().set('id1', req.calcID.toString()).set('id2', '7');
-
-   /* const options = {
-      headers: header,
-      "observe?": "response",
-      "responseType?": "json",
-    };*/
-
-
+    const myvar = new HttpParams().set('id1', req.calcID1.toString()).set('id2', req.calcID2.toString());
     return this.http.get<Premium[]>(url, {params: myvar});
   }
 
+  public getData6(url: string, req: Request): Observable<number> {
 
-  // 'assets/data/test.json'
-
- /* public getData3(url: string): Observable<Premium[]> {
-    return this.http.get<Premium[]>(url)
-      .pipe(map(function(premium: any){
-        return {name: premium.name};
-      }));
+    let header = new HttpHeaders();
+    header.append('Content-Type', 'application/json');
+    const myvar = new HttpParams().set('id1', req.calcID1.toString()).set('id2', req.calcID2.toString());
+    return this.http.get<number>(url, {params: myvar});
   }
-
-  private extractData(res: Response) {
-    let body = <Premium[]>res.json();
-    return body || {};
-  }*/
-
-
-  /*public getData3(url: string): Observable<Premium[]> {
-    return this.http.get(url)
-      .pipe(
-        map(data => {
-          let premiumList = data["premiumList"];
-          return premiumList.map(function ((premium:any){
-            return {}
-          }) {
-
-          })
-        }
-      )
-  }*/
-
-
-
-  /*public getPremiumList(url: string): Observable<Premium[]> {
-    return this.http.get(url).pipe()(map(data=>{
-      let premiumList = data ["userList"];
-      return premiumList.map(function (premium:any) {
-        return {id: premium.id, name: premium.name, description: premium.description, risk: premium.risk};
-      })
-    }))
-  }
-
-
-  public getPremiumList2(url: string): Observable<Premium[]> {
-    return this.http.get(url)
-      .pipe(
-        map((response: Response) => {
-      let premiumList = data ["userList"];
-      return premiumList.map(function (premium:any) {
-        return {id: premium.id, name: premium.name, description: premium.description, risk: premium.risk};
-      })
-    }))
-  }*/
-
-
 }

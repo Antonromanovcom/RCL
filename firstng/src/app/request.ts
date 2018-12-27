@@ -1,4 +1,5 @@
 export class Request {
-  calcID: number;
+  calcID1: number;
+  calcID2: number;
   compareType: number;
 }

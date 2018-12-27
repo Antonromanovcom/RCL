@@ -1,8 +1,8 @@
 package ru.reso.calclogcompare.service;
 
-import ru.reso.calclogcompare.model.Premium;
-import ru.reso.calclogcompare.model.WsCalcLogsNew;
+import ru.reso.calclogcompare.model.*;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 
@@ -39,4 +39,13 @@ public interface PremiumService {
     List<Premium> getPremByRisk(String risk);
 
     void test();
+
+    Request test2();
+
+    Request test2(Long id1, Long id2);
+
+    Integer getMismatchesCount (Long id1, Long id2);
+
+    LoggingEntity getEntity(Long calcId);
+
 }

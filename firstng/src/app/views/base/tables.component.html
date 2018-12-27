@@ -14,19 +14,24 @@
 
             <tbody>
 
-            <tr [ngClass]="{'green': el.id == 1}" *ngFor="let el of childElements">
-                <td>{{el.id}}</td>
-                <td>{{el.name}}</td>
-                <td>{{el.description}}</td>
-              <td><span class="badge badge-success">Success</span></td>
-
-
+            <tr [ngClass]="{'green': el.compare == false}" *ngFor="let el of returnedArray">
+                <td>{{el.key}}</td>
+                <td>{{el.val1}}</td>
+                <td>{{el.val2}}</td>
+              <td>
+                <div *ngIf="el.compare == true">
+              <span class="badge badge-success">{{getCompareStatus(el.compare)}}</span>
+              </div>
+              <div *ngIf="el.compare == false">
+              <span class="badge badge-danger">{{getCompareStatus(el.compare)}}</span>
+              </div>
+              </td>
               </tr>
 
             </tbody>
           </table>
           <div class="col-xs-12 col-12 d-sm-down-none">
-            <pagination [totalItems]="childElements.length" [itemsPerPage]="10" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+            <pagination [totalItems]="childElements.length" [itemsPerPage]="30" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
           </div>
 
             <div>

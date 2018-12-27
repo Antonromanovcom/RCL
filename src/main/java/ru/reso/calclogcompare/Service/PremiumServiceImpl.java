@@ -3,11 +3,10 @@ package ru.reso.calclogcompare.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.reso.calclogcompare.DAO.PremiumDAO;
+import ru.reso.calclogcompare.DAO.SomeFabric;
+import ru.reso.calclogcompare.DAO.WsCF;
 import ru.reso.calclogcompare.DAO.WsCalcLogsNewDAO;
-import ru.reso.calclogcompare.model.ComparedParam;
-import ru.reso.calclogcompare.model.LoggingEntity;
-import ru.reso.calclogcompare.model.Premium;
-import ru.reso.calclogcompare.model.WsCalcLogsNew;
+import ru.reso.calclogcompare.model.*;
 import ru.reso.calclogcompare.service.factories.AbstractFactory;
 import ru.reso.calclogcompare.service.factories.concretefactories.WsCalcLogFactory;
 
@@ -36,7 +35,6 @@ public class PremiumServiceImpl implements PremiumService {
 
     @Autowired
     private WsCalcLogsNewDAO wsCalcLogsNewDAO;
-
 
 
 
@@ -94,62 +92,71 @@ public class PremiumServiceImpl implements PremiumService {
     @Override
     public void test() {
 
-
-      //  LinkedHashMap<String, ComparedParam> result = new LinkedHashMap<String, ComparedParam>();
-        AbstractFactory factory; // Фабрика
-        WsCalcLogsNew wsCalcLogsNew1;
-        wsCalcLogsNew1 = wsCalcLogsNewDAO.findOne(Long.valueOf(122866996));
-        factory = new WsCalcLogFactory(wsCalcLogsNew1); // создаем Конкретную фабрику - Премии
-        LinkedHashMap<String, ComparedParam> hash = getResult(factory, Long.valueOf(122866996), Long.valueOf(122866996)); // Наполняем ХэшМеп
-
+     //   AbstractFactory factory; // Фабрика
+   //     factory = new
+   //     WsCalcLogsNew wsCalcLogsNew1;
+    //    wsCalcLogsNew1 = wsCalcLogsNewDAO.findOne(Long.valueOf(122866996));
+    //    factory = new WsCalcLogFactory(wsCalcLogsNew1); // создаем Конкретную фабрику - Премии
+    //    LinkedHashMap<String, ComparedParam> hash = getResult(factory, Long.valueOf(122866996), Long.valueOf(122866996)); // Наполняем ХэшМеп
 
 
-     //   long startTime = System.currentTimeMillis();
+    }
 
-    //    WsCalcLogsNew wsCalcLogsNew2;
-      //  WsCalcLogsNew wsCalcLogsNew2 = new WsCalcLogsNew();
+    @Override
+    public Request test2() {
+   //     AbstractFactory factory; // Фабрика
+     //   WsCalcLogsNew wsCalcLogsNew1;
+      //  wsCalcLogsNew1 = wsCalcLogsNewDAO.findOne(Long.valueOf(122866996));
+  //      factory = new WsCalcLogFactory(wsCalcLogsNew1); // создаем Конкретную фабрику - Премии
+  //      LinkedHashMap<String, ComparedParam> hash = getResult(factory, Long.valueOf(122866996), Long.valueOf(122866996)); // Наполняем ХэшМеп
+
+        return new Request(null, Long.valueOf(100));
+    }
 
 
-        //return wsCalcLogsNew1;
-   /*     //wsCalcLogsNew2 = wsCalcLogsNewDAO.findOne(Long.valueOf(122867001));
+    @Override
+    public Request test2(Long id1, Long id2) {
 
-        String className = getClassName(wsCalcLogsNew1); //Вытаскиваем имя класса
-        System.out.println((System.currentTimeMillis() - startTime) + ": time exec");
-        try {
-            Class<?> clazz = Class.forName(className); //Берем сам класс
-            for (Field field : clazz.getDeclaredFields()) { //Бегаем по полям класса
-                if ((field.getName()) != null) { // Проверяем, что у нас не ноль и переданное в параметре метода имя и текунщее пробегаемое в цикле поле класса
-                    field.setAccessible(true);
+        long startTime = System.currentTimeMillis(); //Стартовое время на операцию.
 
-                    System.out.println("NAME OF FIELD - " + field.getName() + " | VALUE - " + String.valueOf(field.get(wsCalcLogsNew1)));
+        LinkedHashMap<String, ComparedParam> hash = getResult(this.getEntity(id1), this.getEntity(id2)); // Наполняем ХэшМеп
+        System.out.println((System.currentTimeMillis() - startTime) + ": time exec"); // Время выполнения.
+        return new Request(hash, Long.valueOf(100));
+    }
 
-                }
+    @Override
+    public Integer getMismatchesCount(Long id1, Long id2) {
+
+       int i = 0;
+
+       LinkedHashMap<String, ComparedParam> hash = getResult(this.getEntity(id1), this.getEntity(id2)); // Наполняем ХэшМеп
+
+        for (String name : hash.keySet()) {
+            if (!hash.get(name).getCompare()){
+                i=i+1;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
+        }
 
-        // ----------------------------- а теперь через процедуру -------------------------
+        return i;
+    }
 
-   /*     long startTime2 = System.currentTimeMillis();
-        List<WsCalcLogsNew> wsCalcLogsNewList = wsCalcLogsNewDAO.inOnlyTest(190304724);
-        wsCalcLogsNew2 = wsCalcLogsNewList.get(0);
+    @Override
+    public LoggingEntity getEntity(Long calcId) {
+        WsCalcLogsNew wsCalcLogsNew;
+        wsCalcLogsNew = wsCalcLogsNewDAO.findOne(calcId);
+        if (wsCalcLogsNew == null){ // Если такого айдишника нет
 
+         //   fillEntityWithEmptyValues(wsCalcLogsNew);
+            wsCalcLogsNew = new WsCalcLogsNew();
 
-        className = getClassName(wsCalcLogsNew2); //Вытаскиваем имя класса
-        System.out.println((System.currentTimeMillis() - startTime2) + ": time exec");
-        try {
-            Class<?> clazz = Class.forName(className); //Берем сам класс
-            for (Field field : clazz.getDeclaredFields()) { //Бегаем по полям класса
-                if ((field.getName()) != null) { // Проверяем, что у нас не ноль и переданное в параметре метода имя и текунщее пробегаемое в цикле поле класса
-                    field.setAccessible(true);
-                    System.out.println("NAME OF FIELD - " + field.getName() + " | TYPE OF FIELD - " + field.getType().toString());
+        }
+        return wsCalcLogsNew;
+    }
 
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
+    private void fillEntityWithEmptyValues(WsCalcLogsNew wsCalcLogsNew) {
+
+       // wsCalcLogsNew.setAccident();
+
 
 
     }
@@ -164,7 +171,6 @@ public class PremiumServiceImpl implements PremiumService {
         res = cls.getClass().getName();
         return res;
     }
-
 
     /**
      * Возвращаем тип поля.  Данный метод позволяет вернуть тип поля по его имени, давая нам нужный уровень абстракции и автоматизации

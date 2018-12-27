@@ -1,8 +1,8 @@
 export class Premium {
-  id: number;
-  name: string;
-  description: string;
-  risk: string;
+  key: string;
+  val1: string;
+  val2: string;
+  compare: boolean;
 
   constructor() {
   }

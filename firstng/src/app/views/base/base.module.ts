@@ -40,6 +40,14 @@ import { TooltipsComponent } from './tooltips.component';
 // Components Routing
 import { BaseRoutingModule } from './base-routing.module';
 
+// Modal Component
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalsComponent } from '../notifications/modals.component';
+
+
+
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -51,6 +59,7 @@ import { BaseRoutingModule } from './base-routing.module';
     PaginationModule.forRoot(),
     PopoverModule.forRoot(),
     ProgressbarModule.forRoot(),
+    ModalModule.forRoot(),
     TooltipModule.forRoot()
   ],
   declarations: [
@@ -61,7 +70,8 @@ import { BaseRoutingModule } from './base-routing.module';
     BadgesComponent,
     PaginationsComponent,
     ProgressComponent,
-    TooltipsComponent
+    TooltipsComponent,
+    ModalsComponent
   ]
 })
 export class BaseModule { }

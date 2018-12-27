@@ -9,10 +9,10 @@ package ru.reso.calclogcompare.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.reso.calclogcompare.model.*;
 import ru.reso.calclogcompare.service.PremiumService;
-import ru.reso.calclogcompare.model.Premium;
-import ru.reso.calclogcompare.model.PremiumList;
-import ru.reso.calclogcompare.model.RequestFromClient;
+
+import java.util.LinkedHashMap;
 
 @RestController
 @RequestMapping("/rest")
@@ -41,8 +41,6 @@ public class MainRestController {
      */
     @PostMapping("/get")
     public Premium getCompareResult(@RequestBody RequestFromClient newRequest) throws Exception {
-        //  List<Premium> listUsers = new ArrayList<>();
-        //  listUsers.add(premiumService.getPremById2(1));
         System.out.println("POST captured " + newRequest.toString());
         return premiumService.getPremById2(1);
     }
@@ -55,27 +53,51 @@ public class MainRestController {
      * @return - табличку через обычное ДАО.
      * @throws Exception - эксепшн.
      */
-    //PostMapping(value = "/getallbyrisk", consumes = "application/json", produces = "application/json")
-
-    //@RequestMapping(method = RequestMethod.GET, path = "/getallbyrisk")
-    //public PremiumList getAllByRisk(@RequestBody Risk risk) throws Exception {
-    //RequestMapping(value = "getallbyrisk", method = RequestMethod.GET)
     @RequestMapping(method = RequestMethod.GET, path = "/v2")
     public PremiumList getAllByRisk() {
-        //List<Premium> premiumList = new ArrayList<>();
+
         PremiumList premiumList = new PremiumList();
         premiumList.getPremiumList().addAll(premiumService.getPremByRisk("R001"));
-        //premiumList.getPremiumList().add(premiumService.getPremById2(1));
-
         System.out.println("WE ARE HERE !!!!");
-
         premiumService.test();
-
         return premiumList;
 
     }
 
+    /**
+     * Выбрасываем финальный linkedhashmap
+     * на клиента.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/v7")
+    public Request getEntityHash() {
 
+        //  PremiumList premiumList = new PremiumList();
+        //  premiumList.getPremiumList().addAll(premiumService.getPremByRisk("R001"));
+        System.out.println("WE ARE IN getEntityHash !!!!");
+        //premiumService.test2();
+        return premiumService.test2();
+
+    }
+
+
+    /**
+     * Выбрасываем финальный linkedhashmap
+     * на клиента.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/v10")
+    public Request getEntityHashWithParametrs(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2) {
+
+        System.out.println("WE ARE IN getEntityHash with Parametrs !!!!");
+
+        return premiumService.test2(Long.valueOf(id1), Long.valueOf(id2));
+
+    }
 
 
     /**
@@ -112,6 +134,17 @@ public class MainRestController {
 
     }
 
+
+    /**
+     * Сколько вообще несовпадений.
+     *
+     * @return - табличку.
+     * @throws Exception - эксепшн.
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/v11")
+    public Integer getMismatchesCount(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2) {
+        return premiumService.getMismatchesCount(Long.valueOf(id1), Long.valueOf(id2));
+    }
 
 
 }

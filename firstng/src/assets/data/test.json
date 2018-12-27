@@ -1,22 +1,431 @@
 {
-  "premiumList": [
+  "compareList": [
     {
-      "id": 1,
-      "name": "премия за отвагу",
-      "description": "слабоумие и отвага",
-      "risk": "R001"
+      "key": "calcid",
+      "val1": "122866996",
+      "val2": "122866996",
+      "compare": true
     },
     {
-      "id": 2,
-      "name": "премия за слабоумие",
-      "description": "слабоумие и отвага",
-      "risk": "R001"
+      "key": "notapplyspecprogdiscount",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
     },
     {
-      "id": 4,
-      "name": "премия за храбрость",
-      "description": "когда не ссы.... не боишься",
-      "risk": "R001"
+      "key": "targetcompany",
+      "val1": "RESO-online",
+      "val2": "RESO-online",
+      "compare": true
+    },
+    {
+      "key": "insurantid",
+      "val1": "17256920",
+      "val2": "17256920",
+      "compare": true
+    },
+    {
+      "key": "carownerid",
+      "val1": "17256920",
+      "val2": "17256920",
+      "compare": true
+    },
+    {
+      "key": "carbrandname",
+      "val1": "VOLKSWAGEN",
+      "val2": "VOLKSWAGEN",
+      "compare": true
+    },
+    {
+      "key": "carmodelname",
+      "val1": "POLO",
+      "val2": "GOLF",
+      "compare": false
+    },
+    {
+      "key": "cartype",
+      "val1": "Л",
+      "val2": "Л",
+      "compare": true
+    },
+    {
+      "key": "carbodynumber",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "carchassisnumber",
+      "val1": "XW8ZZZ61ZFG004781",
+      "val2": "XW8ZZZ61ZFG004781",
+      "compare": true
+    },
+    {
+      "key": "creditauto",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "lenderid",
+      "val1": "9",
+      "val2": "9",
+      "compare": true
+    },
+    {
+      "key": "autorace",
+      "val1": "Д",
+      "val2": "Д",
+      "compare": true
+    },
+    {
+      "key": "carkind",
+      "val1": "3",
+      "val2": "3",
+      "compare": true
+    },
+    {
+      "key": "carvendortype",
+      "val1": "0",
+      "val2": "0",
+      "compare": true
+    },
+    {
+      "key": "carprice",
+      "val1": "0",
+      "val2": "0",
+      "compare": true
+    },
+    {
+      "key": "rightwheel",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "antitheftsystem",
+      "val1": "0",
+      "val2": "0",
+      "compare": true
+    },
+    {
+      "key": "thfmechdevice",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "carpurchasedate",
+      "val1": "00:00:00",
+      "val2": "00:00:00",
+      "compare": true
+    },
+    {
+      "key": "carparkcount",
+      "val1": "1",
+      "val2": "1",
+      "compare": true
+    },
+    {
+      "key": "powerauto",
+      "val1": "105",
+      "val2": "105",
+      "compare": true
+    },
+    {
+      "key": "carusedtrailer",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "caraccidentplaceinssum",
+      "val1": "0",
+      "val2": "0",
+      "compare": true
+    },
+    {
+      "key": "caraccidentplacekind",
+      "val1": "1",
+      "val2": "1",
+      "compare": true
+    },
+    {
+      "key": "caraccidentplacenum",
+      "val1": "0",
+      "val2": "0",
+      "compare": true
+    },
+    {
+      "key": "carextequipmentinssum",
+      "val1": "0",
+      "val2": "0",
+      "compare": true
+    },
+    {
+      "key": "insfromdate1",
+      "val1": "00:00:00",
+      "val2": "00:00:00",
+      "compare": true
+    },
+    {
+      "key": "instodate1",
+      "val1": "00:00:00",
+      "val2": "00:00:00",
+      "compare": true
+    },
+    {
+      "key": "insfromdate2",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "instodate2",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "insfromdate3",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "instodate3",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "caruseregion",
+      "val1": "14620",
+      "val2": "14620",
+      "compare": true
+    },
+    {
+      "key": "caruseregionkladr",
+      "val1": "2300000100000",
+      "val2": "2300000100000",
+      "compare": true
+    },
+    {
+      "key": "carcategory",
+      "val1": "-1",
+      "val2": "-1",
+      "compare": true
+    },
+    {
+      "key": "perioduse",
+      "val1": "12",
+      "val2": "12",
+      "compare": true
+    },
+    {
+      "key": "carvehicletypeosago",
+      "val1": "Л",
+      "val2": "Л",
+      "compare": true
+    },
+    {
+      "key": "inssumdgo",
+      "val1": "0",
+      "val2": "0",
+      "compare": true
+    },
+    {
+      "key": "withweardgo",
+      "val1": "Д",
+      "val2": "Д",
+      "compare": true
+    },
+    {
+      "key": "kbmcheckcardiagnisticcard",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "casco",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "damage",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "theft",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "help",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "gap",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "accident",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "equipment",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "osago",
+      "val1": "Д",
+      "val2": "Д",
+      "compare": true
+    },
+    {
+      "key": "dgo",
+      "val1": "Н",
+      "val2": "Н",
+      "compare": true
+    },
+    {
+      "key": "pnumber",
+      "val1": "ЕЕЕ0386069732",
+      "val2": "ЕЕЕ0386069732",
+      "compare": true
+    },
+    {
+      "key": "commercprogrammid",
+      "val1": "0",
+      "val2": "0",
+      "compare": true
+    },
+    {
+      "key": "carownertypeid",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "insuranttypeid",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "cardamagequanitymanual",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "isanothersk",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "insurer",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "ownerRegion",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "driverlisttype",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "carmodelcode",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "policy",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "driverlisttypeosago",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "caryear",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "admuser",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "crash",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "holderrequestid",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "ownerrequestid",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "equifaxscore",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "equifaxerrmsg",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "policytype",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
+    },
+    {
+      "key": "customkb",
+      "val1": "null",
+      "val2": "null",
+      "compare": true
     }
-  ]
+  ],
+  "elapsedTime": 100
 }

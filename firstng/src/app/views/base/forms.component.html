@@ -1,74 +1,82 @@
 <div class="animated fadeIn">
 
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">
-          <strong>Horizontal</strong> Form
-        </div>
-        <div class="card-body">
-          <form action="" method="post" class="was-validated">
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="hf-email">Email</label>
-              <div class="col-md-9">
-                <input type="text" id="hf-email" name="hf-email" class="form-control" placeholder="Enter Email.." [(ngModel)]="req.calcID" required>
-                <div class="valid-feedback">
-                  Input is valid.
-                </div>
-                <div class="invalid-feedback">
-                  Please provide a valid information.
-                </div>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="hf-password">Password</label>
-              <div class="col-md-9">
-                <input type="password" id="hf-password" name="hf-password" class="form-control" placeholder="Enter Password.." autocomplete="current-password">
-                <span class="help-block">Please enter your password</span>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" >Radios</label>
-              <div class="col-md-9 col-form-label">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radios" id="radio1" value="option1" checked>
-                  <label class="form-check-label" for="radio1">
-                    Option 1
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radios" id="radio2" value="option2">
-                  <label class="form-check-label" for="radio2">
-                    Option 2
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radios" id="radio3" value="option3">
-                  <label class="form-check-label" for="radio3">
-                    Option 3
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <p>Имя пользователя: {{receivedPrem?.name}}</p>
-                <p>Возраст пользователя: {{receivedPrem?.description}}</p>
-              </div>
-
-            </div>
-          </form>
-        </div>
-        <div class="card-footer">
-          <div class="row align-items-center mt-3">
-          <div class="col-md-6">
-            <button type="submit" class="btn btn-block btn-success" (click)="change(req)"><i class="fa fa-dot-circle-o"></i> Submit</button>
-          </div>
-          <div class="col-md-6">
-          <button type="reset" class="btn btn-block btn-danger"><i class="fa fa-ban"></i> Reset</button>
-        </div>
-          </div>
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Horizontal</strong> Form
       </div>
+      <div class="card-body">
+        <form #userForm="ngForm" action="" method="post" class="was-validated">
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="hf-email">CalcID #1</label>
+            <div class="col-md-9">
+              <input  type="text" id="hf-email" name="hf-email" class="form-control" placeholder="Enter calcID #1" [(ngModel)]="req.calcID1" required>
+              <div class="valid-feedback">
+                Input is valid.
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid information.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="hf-password">CalcID #1</label>
+            <div class="col-md-9">
+              <input type="text" id="hf-password" name="hf-password" class="form-control" placeholder="Enter calcID #2" [(ngModel)]="req.calcID2" required>
+              <div class="valid-feedback">
+                Input is valid.
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid information.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" >Опции [в данном релизе - НЕ РАБОТАЮТ]</label>
+            <div class="col-md-9 col-form-label">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="radio1" value="option1" checked>
+                <label class="form-check-label" for="radio1">
+                  Option 1
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="radio2" value="option2">
+                <label class="form-check-label" for="radio2">
+                  Option 2
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="radio3" value="option3">
+                <label class="form-check-label" for="radio3">
+                  Option 3
+                </label>
+              </div>
+            </div>
+            <div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="row align-items-center mt-3">
+              <div class="col-md-6">
+                <button type="submit" class="btn btn-block btn-success" (click)="change(req)" [disabled]="userForm.invalid"><i class="fa fa-dot-circle-o"></i> СРАВНИТЬ </button>
+              </div>
+              <div class="col-md-6">
+                <button type="reset" class="btn btn-block btn-danger"><i class="fa fa-ban"></i> СТЕРЕТЬ </button>
+
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
     </div><!--/.col-->
 
 
+
+
+  </div>
 </div>
-</div>
+
