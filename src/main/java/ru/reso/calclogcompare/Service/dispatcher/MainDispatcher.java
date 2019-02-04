@@ -1,10 +1,9 @@
 package ru.reso.calclogcompare.service.dispatcher;
 
-import ru.reso.calclogcompare.DAO.SomeFabric;
-import ru.reso.calclogcompare.model.ComparedParam;
+import ru.reso.calclogcompare.model.common.ComparedParam;
 import ru.reso.calclogcompare.model.LoggingEntity;
 import ru.reso.calclogcompare.model.WsCalcLogsNew;
-import ru.reso.calclogcompare.service.factories.AbstractFactory;
+
 import java.lang.reflect.Field;
 import java.util.LinkedHashMap;
 
@@ -73,7 +72,6 @@ public class MainDispatcher {
             for (Field field : clazz.getDeclaredFields()) { //Бегаем по полям класса
                 if ((field.getName()) != null) { // Проверяем, что у нас не ноль и переданное в параметре метода имя и текунщее пробегаемое в цикле поле класса
                     field.setAccessible(true); // Открываем поле класса
-                    System.out.println("NAME OF FIELD - " + field.getName() + " | VALUE - " + String.valueOf(field.get(entity)));
                     result.put(field.getName(), String.valueOf(field.get(entity))); // кладем в Хэш
                 }
             }

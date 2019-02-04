@@ -6,25 +6,30 @@
       <!-- Nav tabs -->
       <tabset>
         <tab>
-          <ng-template tabHeading><i class="icon-list"></i> Menu &nbsp;<span class="badge badge-success">New</span></ng-template>
+          <ng-template tabHeading><i class="icon-list"></i> Форма ввода calcID &nbsp;</ng-template>
           <app-form-component (onChanged)="onChanged($event)"></app-form-component>
           <button type="button" class="btn btn-info" (click)="openModal()">Create template modal</button>
 
-
         </tab>
         <tab>
-          <ng-template tabHeading><i class="icon-calculator"></i> Calculator &nbsp;<span class="badge badge-pill badge-danger">{{notEqualsParams}}</span></ng-template>
-          <div>
+          <ng-template tabHeading><i class="icon-calculator"></i> WsCalcLogs &nbsp;
+            <span [ngClass]="(notEqualsParams>0)?'badge badge-pill badge-danger':'badge badge-pill badge-success'">{{notEqualsParams}}</span>
+          </ng-template>
 
-          </div>
           <div>
             <app-tables-component [childElements]="premiumsO"></app-tables-component>
           </div>
 
         </tab>
         <tab>
-          <ng-template tabHeading><i class="icon-pie-chart"></i> Charts</ng-template>
-          <div *ngFor="let premium of premiumsO">ID: {{ premium.key }}</div>
+          <ng-template tabHeading><i class="icon-calculator"></i> WsCommonLogs
+            <span [ngClass]="(notEqualsCount[1]>0)?'badge badge-pill badge-danger':'badge badge-pill badge-success'">{{notEqualsCount2[2]}}</span>
+          </ng-template>
+
+          <div>
+            <app-tables-component [childElements]="wsCommonLogs"></app-tables-component>
+          </div>
+
         </tab>
         <tab>
           <ng-template tabHeading><i class="icon-pie-chart"></i> Pagination</ng-template>

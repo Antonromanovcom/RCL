@@ -1,8 +1,9 @@
 package ru.reso.calclogcompare.service;
 
 import ru.reso.calclogcompare.model.*;
+import ru.reso.calclogcompare.model.common.Request;
+import ru.reso.calclogcompare.model.test.Premium;
 
-import java.util.LinkedHashMap;
 import java.util.List;
 
 
@@ -44,8 +45,11 @@ public interface PremiumService {
 
     Request test2(Long id1, Long id2);
 
-    Integer getMismatchesCount (Long id1, Long id2);
+    Integer getMismatchesCount (Long id1, Long id2, Integer entityType);
 
-    LoggingEntity getEntity(Long calcId);
+    LoggingEntity getEntity(Long calcId, Integer entityType);
+
+    Request getCompare(Long id1, Long id2, Integer entityType);
+
 
 }

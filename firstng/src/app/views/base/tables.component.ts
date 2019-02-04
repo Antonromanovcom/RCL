@@ -22,7 +22,7 @@ export class TablesComponent implements OnInit, OnChanges {
 
 
   ngOnInit(): void {
-    this.returnedArray = this.childElements.slice(0, 30);
+    this.returnedArray = this.childElements;
   }
 
 
@@ -30,20 +30,17 @@ export class TablesComponent implements OnInit, OnChanges {
 
 
     if (changes['childElements']) {
-      console.log('Sliced array 1: ' + this.returnedArray.length);
     }
 
     if (typeof changes.childElements !== 'undefined') {
-      this.returnedArray = changes.childElements.currentValue.slice(0, 30);
-      console.log('myVal = ', changes.childElements.currentValue);
+      // this.returnedArray = changes.childElements.currentValue.slice(0, 30);
+      this.returnedArray = this.childElements;
     }
   }
 
   public captureScreen() {
     this.returnedArray = this.childElements;
-
     var data = document.getElementById('contentToConvert').outerHTML;
-    // var temp = document.getElementById("exportme").outerHTML;
     console.log(data);
   }
 
@@ -66,12 +63,6 @@ export class TablesComponent implements OnInit, OnChanges {
 
   }
 
-
-  pageChanged(event: any): void {
-    const startItem = (event.page - 1) * event.itemsPerPage;
-    const endItem = event.page * event.itemsPerPage;
-    this.returnedArray = this.childElements.slice(startItem, endItem);
-  }
 
 
   getCompareStatus(str: boolean): string {

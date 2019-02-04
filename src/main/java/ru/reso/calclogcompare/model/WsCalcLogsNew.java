@@ -7,29 +7,6 @@ import java.sql.Time;
 import java.util.LinkedHashMap;
 
 
-/*
-@NamedNativeQuery(
-        name = "getWsCalcLogNewByID",
-        query = "{ ? = call getWsCalcLogNewByID( ? ) }",
-        resultClass = WsCalcLogsNew.class, hints = {
-        @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
-}
-)
-*/
-
-
-/*
-@NamedStoredProcedureQuery(name = "in_only_test",
-        procedureName = "P_GETWSCALCLOGNEWBYID",
-        resultClasses = WsCalcLogsNew.class,
-        parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, name = "v_calcId", type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.REF_CURSOR, name = "postAndComments", type = void.class)
-        })
-*/
-
-
-
 @Entity
 @Table(name = "WS_CALC_LOGS_NEW_TEMP_COPY")
 public class WsCalcLogsNew implements LoggingEntity {

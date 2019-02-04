@@ -34,11 +34,22 @@ export class HttpService {
     return this.http.get<Premium[]>(url, {params: myvar});
   }
 
-  public getData6(url: string, req: Request): Observable<number> {
+
+  public getData7(url: string, req: Request): Observable<Premium[]> {
 
     let header = new HttpHeaders();
     header.append('Content-Type', 'application/json');
-    const myvar = new HttpParams().set('id1', req.calcID1.toString()).set('id2', req.calcID2.toString());
+    const myvar = new HttpParams().set('id1', req.calcID1.toString()).set('id2', req.calcID2.toString()).set('entity', '2');
+    return this.http.get<Premium[]>(url, {params: myvar});
+  }
+
+
+
+  public getData6(url: string, req: Request, entity: string): Observable<number> {
+
+    let header = new HttpHeaders();
+    header.append('Content-Type', 'application/json');
+    const myvar = new HttpParams().set('id1', req.calcID1.toString()).set('id2', req.calcID2.toString()).set('entity', entity);
     return this.http.get<number>(url, {params: myvar});
   }
 }

@@ -30,9 +30,6 @@
 
             </tbody>
           </table>
-          <div class="col-xs-12 col-12 d-sm-down-none">
-            <pagination [totalItems]="childElements.length" [itemsPerPage]="30" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
-          </div>
 
             <div>
               <input type="button" value="COPY HTML" (click)="captureScreen()"/>

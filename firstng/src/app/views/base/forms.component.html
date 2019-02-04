@@ -32,30 +32,24 @@
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-md-3 col-form-label" >Опции [в данном релизе - НЕ РАБОТАЮТ]</label>
+            <label class="col-md-3 col-form-label" >ГДЕ СЧИТАЕМ [ВРЕМЕННЫЙ ПЕРЕКЛЮЧАТЕЛЬ]</label>
+
             <div class="col-md-9 col-form-label">
+
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="radio1" value="option1" checked>
-                <label class="form-check-label" for="radio1">
-                  Option 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="radio2" value="option2">
-                <label class="form-check-label" for="radio2">
-                  Option 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="radio3" value="option3">
-                <label class="form-check-label" for="radio3">
-                  Option 3
-                </label>
+                <ul class="list-group">
+                <li class="list-group-item"  *ngFor="let item of itemsList">
+                  <input type="radio" [(ngModel)]="radioSelected" name="list_name" value="{{item.value}}" (change)="onItemChange(item)"/> {{item.name}}
+                </li>
+                </ul>
               </div>
             </div>
             <div>
+              <p>{{radioSelectedString}}</p>
             </div>
           </div>
+
+
 
           <div class="card-footer">
             <div class="row align-items-center mt-3">
@@ -63,7 +57,7 @@
                 <button type="submit" class="btn btn-block btn-success" (click)="change(req)" [disabled]="userForm.invalid"><i class="fa fa-dot-circle-o"></i> СРАВНИТЬ </button>
               </div>
               <div class="col-md-6">
-                <button type="reset" class="btn btn-block btn-danger"><i class="fa fa-ban"></i> СТЕРЕТЬ </button>
+                <button type="reset" class="btn btn-block btn-danger" (click)="testV()"><i class="fa fa-ban"></i> СТЕРЕТЬ </button>
 
               </div>
             </div>

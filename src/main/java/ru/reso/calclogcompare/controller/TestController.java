@@ -2,7 +2,7 @@ package ru.reso.calclogcompare.controller;
 
 import org.springframework.web.bind.annotation.*;
 import ru.reso.calclogcompare.service.PremiumService;
-import ru.reso.calclogcompare.model.Premium;
+import ru.reso.calclogcompare.model.test.Premium;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;

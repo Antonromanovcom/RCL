@@ -1,9 +1,6 @@
 package ru.reso.calclogcompare.service.factories.concretefactories;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import ru.reso.calclogcompare.DAO.WsCalcLogsNewDAO;
 import ru.reso.calclogcompare.model.WsCalcLogsNew;
-import ru.reso.calclogcompare.service.PremiumService;
 import ru.reso.calclogcompare.service.factories.AbstractFactory;
 
 import java.lang.reflect.Field;
@@ -16,7 +13,6 @@ public class WsCalcLogFactory implements AbstractFactory {
     public WsCalcLogFactory(WsCalcLogsNew wsCalcLogsNew) {
         this.wsCalcLogsNew = wsCalcLogsNew;
     }
-
 
     public WsCalcLogFactory() {
     }

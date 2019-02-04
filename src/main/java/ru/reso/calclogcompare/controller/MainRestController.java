@@ -9,10 +9,14 @@ package ru.reso.calclogcompare.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.reso.calclogcompare.model.*;
+import ru.reso.calclogcompare.model.common.Request;
+import ru.reso.calclogcompare.model.common.RequestFromClient;
+import ru.reso.calclogcompare.model.test.Premium;
+import ru.reso.calclogcompare.model.test.PremiumList;
 import ru.reso.calclogcompare.service.PremiumService;
 
-import java.util.LinkedHashMap;
+
+import java.sql.Types;
 
 @RestController
 @RequestMapping("/rest")
@@ -23,6 +27,7 @@ public class MainRestController {
      */
     @Autowired
     private PremiumService premiumService;
+
 
     @RequestMapping(value = "check", method = RequestMethod.GET)
     public ResponseEntity<?> CheckSerial(@RequestParam("id") String id) {
@@ -64,24 +69,6 @@ public class MainRestController {
 
     }
 
-    /**
-     * Выбрасываем финальный linkedhashmap
-     * на клиента.
-     *
-     * @return - табличку через обычное ДАО.
-     * @throws Exception - эксепшн.
-     */
-    @RequestMapping(method = RequestMethod.GET, path = "/v7")
-    public Request getEntityHash() {
-
-        //  PremiumList premiumList = new PremiumList();
-        //  premiumList.getPremiumList().addAll(premiumService.getPremByRisk("R001"));
-        System.out.println("WE ARE IN getEntityHash !!!!");
-        //premiumService.test2();
-        return premiumService.test2();
-
-    }
-
 
     /**
      * Выбрасываем финальный linkedhashmap
@@ -92,11 +79,8 @@ public class MainRestController {
      */
     @RequestMapping(method = RequestMethod.GET, path = "/v10")
     public Request getEntityHashWithParametrs(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2) {
-
         System.out.println("WE ARE IN getEntityHash with Parametrs !!!!");
-
         return premiumService.test2(Long.valueOf(id1), Long.valueOf(id2));
-
     }
 
 
@@ -143,8 +127,33 @@ public class MainRestController {
      */
     @RequestMapping(method = RequestMethod.GET, path = "/v11")
     public Integer getMismatchesCount(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2) {
-        return premiumService.getMismatchesCount(Long.valueOf(id1), Long.valueOf(id2));
+        return premiumService.getMismatchesCount(Long.valueOf(id1), Long.valueOf(id2), 1);
     }
+
+
+    /**
+     * Выбрасываем финальный linkedhashmap
+     * на клиента.
+     *
+     * @return - табличку через обычное ДАО.
+     * @throws Exception - эксепшн.
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/getcompare")
+    public Request getEntityHashWithParametrs(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2, @RequestParam("entity") Integer entity) {
+        return premiumService.getCompare(Long.valueOf(id1), Long.valueOf(id2), entity);
+    }
+
+    /**
+     * Сколько вообще несовпадений.
+     *
+     * @return - табличку.
+     * @throws Exception - эксепшн.
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/getcount")
+    public Integer getMismatchesCount2(@RequestParam("id1") Integer id1, @RequestParam("id2") Integer id2, @RequestParam("entity") Integer entity) {
+        return premiumService.getMismatchesCount(Long.valueOf(id1), Long.valueOf(id2), entity);
+    }
+
 
 
 }
